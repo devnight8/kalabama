@@ -1,17 +1,17 @@
-const loginBtn = document.querySelector("#login");
-const popUpLogin = document.querySelector("#popup-login");
-loginBtn.addEventListener("click", function (e) {
-  e.preventDefault();
-popUpLogin.classList.toggle("flex");
-popUpLogin.style.display = popUpLogin.classList.contains("flex") ? "flex" : "none";
-
-// Close popup when clicking outside
-document.addEventListener('click', function(event) {
-  if (popUpLogin.classList.contains('flex') && 
-      !popUpLogin.contains(event.target) && 
-      event.target !== loginBtn) {
-    popUpLogin.classList.remove('flex');
-    popUpLogin.style.display = 'none';
-  }
-});
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 0,
+  centeredSlides: true,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });

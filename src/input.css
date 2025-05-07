@@ -35,3 +35,27 @@ Text Domain: FitLand
 * {
   font-family: var(--font-iranSansX), serif;
 }
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
+  background: #ffffff;
+
+  border-radius: 3px !important;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  /* color: red !important; */
+  background: #ffffff !important;
+  height: 20px !important;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  right: 25px !important;
+  width: 100%;
+  text-align: right;
+}
