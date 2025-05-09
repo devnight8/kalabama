@@ -32,8 +32,8 @@
     </header>
     <section class="container max-w-[1480px] mx-auto py-4">
         <nav>
-            <ul class="flex items-center gap-14">
-                <li class="text-sm flex items-center gap-2">
+            <ul class="flex items-center gap-10">
+                <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
                     <span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -42,28 +42,42 @@
                     <a href="">دسته بندی ها</a>
 
                 </li>
-                <li class="text-sm">
-                    <span></span>
+                <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
+                    <span>
+                        <img class="h-6 w-6" src="<?php echo get_template_directory_uri() . '/assets/img/discount.svg' ?>" alt="">
+                    </span>
                     <a href="">تکنوآف</a>
 
                 </li>
-                <li class="text-sm">
-                    <span></span>
+                <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
+                    <span>
+                        <img class="h-6 w-6" src="<?php echo get_template_directory_uri() . '/assets/img/bag-icon.svg' ?>" alt="">
+
+                    </span>
                     <a href="">خرید سازمانی</a>
 
                 </li>
-                <li class="text-sm">
-                    <span></span>
+                <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
+                    <span>
+                        <img class="h-6 w-6" src="<?php echo get_template_directory_uri() . '/assets/img/gift.svg' ?>" alt="">
+
+                    </span>
                     <a href="">کارت هدیه</a>
 
                 </li>
-                <li class="text-sm">
-                    <span></span>
+                <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
+                    <span>
+                        <img class="h-6 w-6" src="<?php echo get_template_directory_uri() . '/assets/img/master-card.svg' ?>" alt="">
+
+                    </span>
                     <a href="">خرید اقساطی</a>
 
                 </li>
-                <li class="text-sm">
-                    <span></span>
+                <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
+                    <span>
+                        <img class="h-6 w-6" src="<?php echo get_template_directory_uri() . '/assets/img/gold.svg' ?>" alt="">
+
+                    </span>
                     <a href="">خرید طلای دیجیتال</a>
 
                 </li>
