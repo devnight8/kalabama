@@ -10,9 +10,11 @@
 </head>
 
 <body>
+    <!-- TOP HEADER -->
     <section class="top-header w-full">
         <a href=""><img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/banner-top-header.gif' ?>" alt=""></a>
     </section>
+    <!-- Header -->
     <header class="container max-w-[1480px] mx-auto flex items-center py-4">
         <div>
             <a href=""><img src="<?php echo get_template_directory_uri() . '/assets/img/logo.svg' ?>" alt=""></a>
@@ -23,13 +25,16 @@
                 <input type="search" placeholder="محصول، برند یا دسته مورد نظرتان را جستجو کنید" class="outline-none w-full">
             </div>
         </div>
-        <div class="flex items-center gap-5">
+        <div class="flex items-center gap-5 relative">
             <button class="border border-gray-500 px-7 py-2 rounded-md cursor-pointer"> ورود | ثبت نام </button>
-            <button>
+            <button class="hover:[&+div]:block relative">
                 <img class="w-10 h-10 border p-2 border-gray-200  rounded-md" src="<?php echo get_template_directory_uri() . '/assets/img/bag.svg' ?>" alt="">
+                <span class="absolute bg-blue-400 text-white rounded-full h-5 w-5 text-[12px] -top-2 -right-1 items-center justify-center hidden">1</span>
             </button>
+            <div class="absolute p-2 rounded-full left-0 top-14 shadow text-sm text-gray-500 hidden "> سبد خرید (خالیه) </div>
         </div>
     </header>
+    <!-- NAVBAR -->
     <section class="container max-w-[1480px] mx-auto py-4">
         <nav>
             <ul class="flex items-center gap-10">
@@ -84,6 +89,7 @@
             </ul>
         </nav>
     </section>
+    <!-- SLIDER -->
     <section id="slider" class="w-full">
         <div class="swiper slider">
             <div class="swiper-wrapper ">
@@ -108,6 +114,7 @@
             <div class="slider-pagination"></div>
         </div>
     </section>
+    <!-- CATEGORY STORY -->
     <section class="my-[120px] container  max-w-[1480px] mx-auto" id="cat-story">
         <div class="swiper category-list">
             <div class="swiper-wrapper ">
