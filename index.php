@@ -17,7 +17,7 @@
         <div>
             <a href=""><img src="<?php echo get_template_directory_uri() . '/assets/img/logo.svg' ?>" alt=""></a>
         </div>
-        <div class="flex flex-1 mr-3 h-14">
+        <div class="flex flex-1 mr-6 h-14">
             <div class="flex items-center justify-start bg-bg-color p-2 w-2xl gap-3 rounded-md">
                 <img class="w-6 h-6 " src="<?php echo get_template_directory_uri() . '/assets/img/icon-search.svg' ?>" alt="">
                 <input type="search" placeholder="محصول، برند یا دسته مورد نظرتان را جستجو کنید" class="outline-none w-full">
@@ -30,7 +30,46 @@
             </button>
         </div>
     </header>
+    <section class="container max-w-[1480px] mx-auto py-4">
+        <nav>
+            <ul class="flex items-center gap-14">
+                <li class="text-sm flex items-center gap-2">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </span>
+                    <a href="">دسته بندی ها</a>
 
+                </li>
+                <li class="text-sm">
+                    <span></span>
+                    <a href="">تکنوآف</a>
+
+                </li>
+                <li class="text-sm">
+                    <span></span>
+                    <a href="">خرید سازمانی</a>
+
+                </li>
+                <li class="text-sm">
+                    <span></span>
+                    <a href="">کارت هدیه</a>
+
+                </li>
+                <li class="text-sm">
+                    <span></span>
+                    <a href="">خرید اقساطی</a>
+
+                </li>
+                <li class="text-sm">
+                    <span></span>
+                    <a href="">خرید طلای دیجیتال</a>
+
+                </li>
+            </ul>
+        </nav>
+    </section>
     <section id="slider" class="w-full">
         <div class="swiper slider">
             <div class="swiper-wrapper ">

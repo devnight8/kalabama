@@ -465,6 +465,10 @@
   .table-row {
     display: table-row;
   }
+  .size-6 {
+    width: calc(var(--spacing) * 6);
+    height: calc(var(--spacing) * 6);
+  }
   .size-full {
     width: 100%;
     height: 100%;
@@ -544,11 +548,17 @@
   .justify-start {
     justify-content: flex-start;
   }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
   }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
+  }
+  .gap-14 {
+    gap: calc(var(--spacing) * 14);
   }
   .gap-x-2 {
     column-gap: calc(var(--spacing) * 2);
