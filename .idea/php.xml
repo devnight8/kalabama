@@ -21,7 +21,9 @@
       <path value="$PROJECT_DIR$/../../../wp-includes" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.0">
+    <option name="suggestChangeDefaultLanguageLevel" value="false" />
+  </component>
   <component name="PhpStan">
     <PhpStan_settings>
       <phpstan_by_interpreter asDefaultInterpreter="true" interpreter_id="09dbb039-355d-4e58-b3a6-4df509af53f5" timeout="60000" />

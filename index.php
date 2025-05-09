@@ -32,7 +32,7 @@
     </header>
 
     <section id="slider" class="w-full">
-        <div class="swiper mySwiper">
+        <div class="swiper slider">
             <div class="swiper-wrapper ">
                 <div class="swiper-slide ">
                     <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/slider.gif' ?>" alt="">
@@ -52,13 +52,50 @@
             </div>
             <!-- <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div> -->
-            <div class="swiper-pagination"></div>
+            <div class="slider-pagination"></div>
         </div>
-
-
-
-
     </section>
+    <section class="my-[120px] container  max-w-[1480px] mx-auto" id="cat-story">
+        <div class="swiper category-list">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide">
+                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" src="<?php echo get_template_directory_uri() . '/assets/img/cat1.webp' ?>" alt="">
+                </div>
+                <div class="swiper-slide ">
+                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" src="<?php echo get_template_directory_uri() . '/assets/img/cat1.webp' ?>" alt="">
+                </div>
+                <div class="swiper-slide ">
+                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" src="<?php echo get_template_directory_uri() . '/assets/img/cat2.webp' ?>" alt="">
+                </div>
+                <div class="swiper-slide ">
+                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" src="<?php echo get_template_directory_uri() . '/assets/img/cat3.webp' ?>" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" src="<?php echo get_template_directory_uri() . '/assets/img/cat4.webp' ?>" alt="">
+                </div>
+                <div class="swiper-slide ">
+                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" src="<?php echo get_template_directory_uri() . '/assets/img/cat5.webp' ?>" alt="">
+                </div>
+                <div class="swiper-slide ">
+                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" src="<?php echo get_template_directory_uri() . '/assets/img/cat7.webp' ?>" alt="">
+                </div>
+                <div class="swiper-slide ">
+                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" src="<?php echo get_template_directory_uri() . '/assets/img/cat6.webp' ?>" alt="">
+                </div>
+                <div class="swiper-slide ">
+                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" src="<?php echo get_template_directory_uri() . '/assets/img/cat7.webp' ?>" alt="">
+                </div>
+                <div class="swiper-slide ">
+                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" src="<?php echo get_template_directory_uri() . '/assets/img/cat7.webp' ?>" alt="">
+                </div>
+
+            </div>
+            <div class="swiper-button-next cat-btn-next"></div>
+            <div class="swiper-button-prev cat-btn-prev"></div>
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+    </section>
+
 
 
 

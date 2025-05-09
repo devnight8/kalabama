@@ -8,6 +8,8 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-amber-500: oklch(76.9% 0.188 70.08);
+    --color-blue-300: oklch(80.9% 0.105 251.813);
+    --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-500: oklch(55.1% 0.027 264.364);
@@ -322,6 +324,9 @@
   .my-8 {
     margin-block: calc(var(--spacing) * 8);
   }
+  .my-\[120px\] {
+    margin-block: 120px;
+  }
   .mt-0 {
     margin-top: calc(var(--spacing) * 0);
   }
@@ -567,6 +572,9 @@
   .rounded {
     border-radius: 0.25rem;
   }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
   .rounded-md {
     border-radius: var(--radius-md);
   }
@@ -576,6 +584,13 @@
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+  .border-3 {
+    border-style: var(--tw-border-style);
+    border-width: 3px;
+  }
+  .border-blue-300 {
+    border-color: var(--color-blue-300);
   }
   .border-gray-100 {
     border-color: var(--color-gray-100);
@@ -900,6 +915,13 @@
       transition-duration: var(--tw-duration, var(--default-transition-duration));
     }
   }
+  .hover\:border-blue-600 {
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-blue-600);
+      }
+    }
+  }
   .hover\:bg-amber-500 {
     &:hover {
       @media (hover: hover) {
@@ -944,7 +966,7 @@
 * {
   font-family: var(--font-iranSansX), serif;
 }
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.slider-pagination .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
   background: #ffffff;
   border-radius: 3px !important;
@@ -953,10 +975,31 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: #ffffff !important;
   height: 20px !important;
 }
-.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-  right: 25px !important;
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 33px !important;
+  top: var(--swiper-pagination-top,auto);
+  right: 20px !important;
   width: 100%;
-  text-align: right;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.swiper-button-next.cat-btn-next,.swiper-button-prev.cat-btn-prev {
+  background: #fff;
+  box-shadow: 2px 2px 10px #00000026;
+  border-radius: 100%;
+  width: 28px;
+  height: 28px;
+}
+.swiper-button-next.cat-btn-next:after, .swiper-rtl .swiper-button-next.cat-btn-next:after {
+  content: 'prev';
+  font-size: 12px;
+  color: #000;
+}
+.swiper-button-prev.cat-btn-prev:after, .swiper-rtl .swiper-button-prev.cat-btn-prev:after {
+  content: 'next';
+  font-size: 12px;
+  color: #000;
 }
 @property --tw-rotate-x {
   syntax: "*";

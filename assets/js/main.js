@@ -1,17 +1,30 @@
-var swiper = new Swiper(".mySwiper", {
-  spaceBetween: 0,
-  centeredSlides: true,
+var swiper = new Swiper(".slider", {
   loop: true,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".slider-pagination", // مشخص و جدا
     clickable: true,
   },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+});
+
+var categoryList = new Swiper(".category-list", {
+  spaceBetween: 100,
+  slidesPerView: 7,
+  centeredSlides: false,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
   },
+  navigation: {
+    nextEl: ".cat-btn-next",
+    prevEl: ".cat-btn-prev",
+  },
+  // اگر صفحه‌بندی خاص خواستی، اینو هم فعال کن
+  // pagination: {
+  //   el: ".category-pagination",
+  //   clickable: true,
+  // },
 });
