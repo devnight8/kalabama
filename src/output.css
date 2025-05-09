@@ -15,9 +15,13 @@
     --color-blue-400: oklch(70.7% 0.165 254.624);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-blue-600: oklch(54.6% 0.245 262.881);
+    --color-blue-800: oklch(42.4% 0.199 265.638);
+    --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-500: oklch(55.1% 0.027 264.364);
+    --color-gray-800: oklch(27.8% 0.033 256.848);
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-2xl: 42rem;
@@ -221,6 +225,9 @@
   .top-7 {
     top: calc(var(--spacing) * 7);
   }
+  .top-10 {
+    top: calc(var(--spacing) * 10);
+  }
   .top-14 {
     top: calc(var(--spacing) * 14);
   }
@@ -245,8 +252,17 @@
   .isolate {
     isolation: isolate;
   }
+  .z-10 {
+    z-index: 10;
+  }
+  .z-20 {
+    z-index: 20;
+  }
   .z-30 {
     z-index: 30;
+  }
+  .z-99 {
+    z-index: 99;
   }
   .col-1 {
     grid-column: 1;
@@ -500,6 +516,10 @@
   .table-row {
     display: table-row;
   }
+  .size-4 {
+    width: calc(var(--spacing) * 4);
+    height: calc(var(--spacing) * 4);
+  }
   .size-6 {
     width: calc(var(--spacing) * 6);
     height: calc(var(--spacing) * 6);
@@ -553,6 +573,21 @@
   .w-10 {
     width: calc(var(--spacing) * 10);
   }
+  .w-\[100px\] {
+    width: 100px;
+  }
+  .w-\[130px\] {
+    width: 130px;
+  }
+  .w-\[150px\] {
+    width: 150px;
+  }
+  .w-\[300px\] {
+    width: 300px;
+  }
+  .w-\[450px\] {
+    width: 450px;
+  }
   .w-\[480px\] {
     width: 480px;
   }
@@ -601,6 +636,9 @@
   .items-center {
     align-items: center;
   }
+  .items-start {
+    align-items: flex-start;
+  }
   .justify-between {
     justify-content: space-between;
   }
@@ -615,6 +653,9 @@
   }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
   }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
@@ -682,8 +723,14 @@
   .bg-blue-500 {
     background-color: var(--color-blue-500);
   }
+  .bg-gray-50 {
+    background-color: var(--color-gray-50);
+  }
   .bg-gray-100 {
     background-color: var(--color-gray-100);
+  }
+  .bg-gray-200 {
+    background-color: var(--color-gray-200);
   }
   .bg-red-500 {
     background-color: var(--color-red-500);
@@ -696,6 +743,9 @@
   }
   .bg-yellow-500 {
     background-color: var(--color-yellow-500);
+  }
+  .stroke-blue-500 {
+    stroke: var(--color-blue-500);
   }
   .p-0 {
     padding: calc(var(--spacing) * 0);
@@ -894,6 +944,9 @@
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
+  .text-\[11px\] {
+    font-size: 11px;
+  }
   .text-\[12px\] {
     font-size: 12px;
   }
@@ -908,8 +961,23 @@
   .text-wrap {
     text-wrap: wrap;
   }
+  .text-black {
+    color: var(--color-black);
+  }
+  .text-blue-500 {
+    color: var(--color-blue-500);
+  }
+  .text-blue-800 {
+    color: var(--color-blue-800);
+  }
+  .text-gray-100 {
+    color: var(--color-gray-100);
+  }
   .text-gray-500 {
     color: var(--color-gray-500);
+  }
+  .text-gray-800 {
+    color: var(--color-gray-800);
   }
   .text-white {
     color: var(--color-white);
@@ -1062,10 +1130,88 @@
       }
     }
   }
+  .\[\&\+div\]\:block {
+    &+div {
+      display: block;
+    }
+  }
   .hover\:\[\&\+div\]\:block {
     &:hover {
       @media (hover: hover) {
         &+div {
+          display: block;
+        }
+      }
+    }
+  }
+  .\[\&\>\]\:block {
+    &> {
+      display: block;
+    }
+  }
+  .\[\&\>\*\]\:block {
+    &>* {
+      display: block;
+    }
+  }
+  .\[\&\>\*\]\:fill-blue-600 {
+    &>* {
+      fill: var(--color-blue-600);
+    }
+  }
+  .\[\&\>\*\]\:stroke-blue-800 {
+    &>* {
+      stroke: var(--color-blue-800);
+    }
+  }
+  .hover\:\[\&\>div\]\:block {
+    &:hover {
+      @media (hover: hover) {
+        &>div {
+          display: block;
+        }
+      }
+    }
+  }
+  .\[\&\>s\]\:stroke-blue-800 {
+    &>s {
+      stroke: var(--color-blue-800);
+    }
+  }
+  .\[\&\>svg\]\:fill-blue-600 {
+    &>svg {
+      fill: var(--color-blue-600);
+    }
+  }
+  .\[\&\>svg\]\:stroke-blue-600 {
+    &>svg {
+      stroke: var(--color-blue-600);
+    }
+  }
+  .\[\&\>svg\]\:stroke-blue-800 {
+    &>svg {
+      stroke: var(--color-blue-800);
+    }
+  }
+  .\[\&\>svg\>pa\]\:stroke-blue-800 {
+    &>svg>pa {
+      stroke: var(--color-blue-800);
+    }
+  }
+  .\[\&\>svg\>path\]\:fill-blue-600 {
+    &>svg>path {
+      fill: var(--color-blue-600);
+    }
+  }
+  .\[\&\>svg\>path\]\:stroke-blue-800 {
+    &>svg>path {
+      stroke: var(--color-blue-800);
+    }
+  }
+  .hover\:\[\&div\]\:block {
+    &:hover {
+      @media (hover: hover) {
+        &div {
           display: block;
         }
       }

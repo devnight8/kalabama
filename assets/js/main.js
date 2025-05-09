@@ -28,3 +28,14 @@ var categoryList = new Swiper(".category-list", {
   //   clickable: true,
   // },
 });
+
+const container = document.getElementById("cart-container");
+const cartBox = document.getElementById("cart-box");
+
+container.addEventListener("mouseenter", () => {
+  cartBox.classList.remove("hidden");
+});
+
+container.addEventListener("mouseleave", () => {
+  cartBox.classList.add("hidden");
+});
