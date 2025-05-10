@@ -22,12 +22,13 @@
         <div class="flex flex-1 mr-6 h-14">
             <div class="flex items-center justify-start bg-bg-color p-2 w-2xl gap-3 rounded-md">
                 <img class="w-6 h-6 " src="<?php echo get_template_directory_uri() . '/assets/img/icon-search.svg' ?>" alt="">
-                <input type="search" placeholder="محصول، برند یا دسته مورد نظرتان را جستجو کنید" class="outline-none w-full">
+                <label for="search"></label>
+                <input type="search" id="search" placeholder="محصول، برند یا دسته مورد نظرتان را جستجو کنید" class="outline-none w-full">
             </div>
         </div>
         <div class="flex items-center gap-5 relative">
             <button class="border border-gray-500 px-7 py-2 rounded-md cursor-pointer"> ورود | ثبت نام </button>
-            <div id="cart-container" class="mt-2" id="cart-container">
+            <div id="cart-container" class="mt-2" >
                 <button id="cart-button" class="hover:[&+div]:block relative">
                     <img class="w-10 h-10 border p-2 border-gray-200  rounded-md" src="<?php echo get_template_directory_uri() . '/assets/img/bag.svg' ?>" alt="">
                     <span class="absolute bg-blue-400 text-white rounded-full h-5 w-5 text-[12px] -top-2 -right-1 items-center justify-center flex">1</span>
@@ -56,7 +57,7 @@
                             <h3 class="text-[12px]">ساعت هوشمند میبرو مدل GS Pro </h3>
                             <div class="flex items-center  gap-4 mt-3 text-blue-800">
                                 <span class="[&>svg]:stroke-blue-600 ">
-                                    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+
                                     <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g id="SVGRepo_bgCarrier" stroke-width="0" />
                                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
@@ -72,7 +73,7 @@
                             </div>
                             <div class="flex items-center  gap-4 text-blue-800">
                                 <span class="[&>svg]:stroke-blue-600 ">
-                                    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+
                                     <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 
                                         <g id="SVGRepo_bgCarrier" stroke-width="0" />
