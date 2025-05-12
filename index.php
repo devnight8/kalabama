@@ -11,153 +11,158 @@
 
 <body>
     <!-- TOP HEADER -->
-    <section class="top-header w-full">
+    <div class="top-header w-full ">
         <a href=""><img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/banner-top-header.gif' ?>" alt=""></a>
-    </section>
+    </div>
     <!-- Header -->
-    <header class="container max-w-[1480px] mx-auto flex items-center py-4">
-        <div>
-            <a href=""><img src="<?php echo get_template_directory_uri() . '/assets/img/logo.svg' ?>" alt=""></a>
-        </div>
-        <div class="flex flex-1 mr-6 h-14">
-            <div class="flex items-center justify-start bg-bg-color p-2 w-2xl gap-3 rounded-md">
-                <img class="w-6 h-6 " src="<?php echo get_template_directory_uri() . '/assets/img/icon-search.svg' ?>" alt="">
-                <label for="search"></label>
-                <input type="search" id="search" placeholder="محصول، برند یا دسته مورد نظرتان را جستجو کنید" class="outline-none w-full">
+    <section class="sticky top-0 left-0 right-0 z-10 bg-white">
+        <header class="container max-w-[1480px] mx-auto flex items-center py-4 ">
+            <div>
+                <a href=""><img src="<?php echo get_template_directory_uri() . '/assets/img/logo.svg' ?>" alt=""></a>
             </div>
-        </div>
-        <div class="flex items-center gap-5 relative">
-            <button class="border border-gray-500 px-7 py-2 rounded-md cursor-pointer"> ورود | ثبت نام </button>
-            <div id="cart-container" class="mt-2" >
-                <button id="cart-button" class="hover:[&+div]:block relative">
-                    <img class="w-10 h-10 border p-2 border-gray-200  rounded-md" src="<?php echo get_template_directory_uri() . '/assets/img/bag.svg' ?>" alt="">
-                    <span class="absolute bg-blue-400 text-white rounded-full h-5 w-5 text-[12px] -top-2 -right-1 items-center justify-center flex">1</span>
-                </button>
-                <!-- CART  -->
-                <div id="cart-box" class="absolute rounded-md left-0  shadow text-sm text-gray-500 w-[450px] p-4 hidden z-20 bg-white ">
-                    <div class="bg-gray-100 flex items-center justify-between p-2 rounded">
-                        <div class="flex items-center justify-center text-[12px] gap-2 font-medium ">
-                            <span class="text-black ">سبد خرید شما:</span>
-                            <span>1 عدد کالا</span>
-                        </div>
-                        <div class="flex items-center justify-center gap-2 text-[12px]">
-                            <a href="" class="flex items-center justify-center gap-2 text-[12px]">
-                                <span class="text-blue-800">مشاهده سبد خرید</span>
-                                <span class="text-blue-800">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- CART BODY -->
-                    <div class="flex justify-between items-center">
-                        <div class="text-black flex gap-3 flex-col items-start justify-start">
-                            <h3 class="text-[12px]">ساعت هوشمند میبرو مدل GS Pro </h3>
-                            <div class="flex items-center  gap-4 mt-3 text-blue-800">
-                                <span class="[&>svg]:stroke-blue-600 ">
-
-                                    <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path d="M15 11L16 17" stroke-width="1.5" stroke-linecap="round" />
-                                            <path d="M9 11L8 17" stroke-width="1.5" stroke-linecap="round" />
-                                            <path d="M9 6V5C9 3.34315 10.3431 2 12 2C13.6569 2 15 3.34315 15 5V6" stroke-width="1.5" stroke-linecap="round" />
-                                            <path d="M20.2235 12.5257C19.6382 9.40452 19.3456 7.84393 18.2347 6.92196C17.1238 6 15.5361 6 12.3605 6H11.6393C8.46374 6 6.87596 6 5.76506 6.92196C4.65416 7.84393 4.36155 9.40452 3.77633 12.5257C2.9534 16.9146 2.54194 19.1091 3.74157 20.5545C4.94119 22 7.17389 22 11.6393 22H12.3605C16.8259 22 19.0586 22 20.2582 20.5545C20.9542 19.7159 21.1079 18.6252 20.9536 17" stroke-width="1.5" stroke-linecap="round" />
-                                        </g>
-                                    </svg>
-                                </span>
-                                <span>تکنو لایف</span>
-                            </div>
-                            <div class="flex items-center  gap-4 text-blue-800">
-                                <span class="[&>svg]:stroke-blue-600 ">
-
-                                    <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-                                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
-
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
-
-                                        <g id="SVGRepo_iconCarrier">
-                                            <path d="M15 11L16 17" stroke-width="1.5" stroke-linecap="round" />
-                                            <path d="M9 11L8 17" stroke-width="1.5" stroke-linecap="round" />
-                                            <path d="M9 6V5C9 3.34315 10.3431 2 12 2C13.6569 2 15 3.34315 15 5V6" stroke-width="1.5" stroke-linecap="round" />
-                                            <path d="M20.2235 12.5257C19.6382 9.40452 19.3456 7.84393 18.2347 6.92196C17.1238 6 15.5361 6 12.3605 6H11.6393C8.46374 6 6.87596 6 5.76506 6.92196C4.65416 7.84393 4.36155 9.40452 3.77633 12.5257C2.9534 16.9146 2.54194 19.1091 3.74157 20.5545C4.94119 22 7.17389 22 11.6393 22H12.3605C16.8259 22 19.0586 22 20.2582 20.5545C20.9542 19.7159 21.1079 18.6252 20.9536 17" stroke-width="1.5" stroke-linecap="round" />
-                                        </g>
-
-                                    </svg>
-                                </span>
-                                <span>موجود در انبار </span>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="w-[130px]">
-                                <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/pro.webp' ?>" alt="">
-                            </div>
-                        </div>
-                    </div>
+            <div class="flex flex-1 mr-6 h-14">
+                <div class="flex items-center justify-start bg-bg-color p-2 w-2xl gap-3 rounded-md">
+                    <img class="w-6 h-6 " src="<?php echo get_template_directory_uri() . '/assets/img/icon-search.svg' ?>" alt="">
+                    <label for="search"></label>
+                    <input type="search" id="search" placeholder="محصول، برند یا دسته مورد نظرتان را جستجو کنید" class="outline-none w-full">
                 </div>
-                <!-- CART EMPTY -->
-                <!-- <div class="absolute p-2 rounded-full left-0 top-14 shadow text-sm text-gray-500 hidden "> سبد خرید (خالیه) </div> -->
             </div>
-        </div>
-    </header>
+            <div class="flex items-center gap-5 relative">
+                <button class="border border-gray-500 px-7 py-2 rounded-md cursor-pointer"> ورود | ثبت نام </button>
+                <div id="cart-container" class="mt-2">
+                    <button id="cart-button" class="hover:[&+div]:block relative">
+                        <img class="w-10 h-10 border p-2 border-gray-200  rounded-md" src="<?php echo get_template_directory_uri() . '/assets/img/bag.svg' ?>" alt="">
+                        <span class="absolute bg-blue-400 text-white rounded-full h-5 w-5 text-[12px] -top-2 -right-1 items-center justify-center flex">1</span>
+                    </button>
+                    <!-- CART  -->
+                    <div id="cart-box" class="absolute rounded-md left-0  shadow text-sm text-gray-500 w-[450px] p-4 hidden z-20 bg-white ">
+                        <div class="bg-gray-100 flex items-center justify-between p-2 rounded">
+                            <div class="flex items-center justify-center text-[12px] gap-2 font-medium ">
+                                <span class="text-black ">سبد خرید شما:</span>
+                                <span>1 عدد کالا</span>
+                            </div>
+                            <div class="flex items-center justify-center gap-2 text-[12px]">
+                                <a href="" class="flex items-center justify-center gap-2 text-[12px]">
+                                    <span class="text-blue-800">مشاهده سبد خرید</span>
+                                    <span class="text-blue-800">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- CART BODY -->
+                        <div class="flex justify-between items-center">
+                            <div class="text-black flex gap-3 flex-col items-start justify-start">
+                                <img class="mt-2" src="<?php echo get_template_directory_uri() . '/assets/img/static_techno-off_new.svg' ?>" alt="">
+                                <h3 class="text-[12px]">ساعت هوشمند میبرو مدل GS Pro </h3>
+                                <div class="flex items-center  gap-4 mt-3 text-blue-800">
+                                    <span class="[&>svg]:stroke-blue-600 ">
+
+                                        <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+                                            <g id="SVGRepo_iconCarrier">
+                                                <path d="M15 11L16 17" stroke-width="1.5" stroke-linecap="round" />
+                                                <path d="M9 11L8 17" stroke-width="1.5" stroke-linecap="round" />
+                                                <path d="M9 6V5C9 3.34315 10.3431 2 12 2C13.6569 2 15 3.34315 15 5V6" stroke-width="1.5" stroke-linecap="round" />
+                                                <path d="M20.2235 12.5257C19.6382 9.40452 19.3456 7.84393 18.2347 6.92196C17.1238 6 15.5361 6 12.3605 6H11.6393C8.46374 6 6.87596 6 5.76506 6.92196C4.65416 7.84393 4.36155 9.40452 3.77633 12.5257C2.9534 16.9146 2.54194 19.1091 3.74157 20.5545C4.94119 22 7.17389 22 11.6393 22H12.3605C16.8259 22 19.0586 22 20.2582 20.5545C20.9542 19.7159 21.1079 18.6252 20.9536 17" stroke-width="1.5" stroke-linecap="round" />
+                                            </g>
+                                        </svg>
+                                    </span>
+                                    <span>تکنو لایف</span>
+                                </div>
+                                <div class="flex items-center  gap-4 text-blue-800">
+                                    <span class="[&>svg]:stroke-blue-600 ">
+
+                                        <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                                            <g id="SVGRepo_iconCarrier">
+                                                <path d="M15 11L16 17" stroke-width="1.5" stroke-linecap="round" />
+                                                <path d="M9 11L8 17" stroke-width="1.5" stroke-linecap="round" />
+                                                <path d="M9 6V5C9 3.34315 10.3431 2 12 2C13.6569 2 15 3.34315 15 5V6" stroke-width="1.5" stroke-linecap="round" />
+                                                <path d="M20.2235 12.5257C19.6382 9.40452 19.3456 7.84393 18.2347 6.92196C17.1238 6 15.5361 6 12.3605 6H11.6393C8.46374 6 6.87596 6 5.76506 6.92196C4.65416 7.84393 4.36155 9.40452 3.77633 12.5257C2.9534 16.9146 2.54194 19.1091 3.74157 20.5545C4.94119 22 7.17389 22 11.6393 22H12.3605C16.8259 22 19.0586 22 20.2582 20.5545C20.9542 19.7159 21.1079 18.6252 20.9536 17" stroke-width="1.5" stroke-linecap="round" />
+                                            </g>
+
+                                        </svg>
+                                    </span>
+                                    <span>موجود در انبار </span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="w-[130px]">
+                                    <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/pro.webp' ?>" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CART EMPTY -->
+                    <!-- <div class="absolute p-2 rounded-full left-0 top-14 shadow text-sm text-gray-500 hidden "> سبد خرید (خالیه) </div> -->
+                </div>
+            </div>
+        </header>
+    </section>
     <!-- NAVBAR -->
-    <section class="container max-w-[1480px] mx-auto py-4">
-        <nav>
-            <ul class="flex items-center gap-10">
-                <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                        </svg>
-                    </span>
-                    <a href="">دسته بندی ها</a>
+    <section class="sticky top-22 left-0 right-0 z-10 bg-white">
+        <section class="container max-w-[1480px] mx-auto py-4">
+            <nav>
+                <ul class="flex items-center gap-10">
+                    <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </span>
+                        <a href="">دسته بندی ها</a>
 
-                </li>
-                <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
-                    <span>
-                        <img class="h-6 w-6" src="<?php echo get_template_directory_uri() . '/assets/img/discount.svg' ?>" alt="">
-                    </span>
-                    <a href="">تکنوآف</a>
+                    </li>
+                    <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
+                        <span>
+                            <img class="h-6 w-6" src="<?php echo get_template_directory_uri() . '/assets/img/discount.svg' ?>" alt="">
+                        </span>
+                        <a href="">تکنوآف</a>
 
-                </li>
-                <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
-                    <span>
-                        <img class="h-6 w-6" src="<?php echo get_template_directory_uri() . '/assets/img/bag-icon.svg' ?>" alt="">
+                    </li>
+                    <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
+                        <span>
+                            <img class="h-6 w-6" src="<?php echo get_template_directory_uri() . '/assets/img/bag-icon.svg' ?>" alt="">
 
-                    </span>
-                    <a href="">خرید سازمانی</a>
+                        </span>
+                        <a href="">خرید سازمانی</a>
 
-                </li>
-                <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
-                    <span>
-                        <img class="h-6 w-6" src="<?php echo get_template_directory_uri() . '/assets/img/gift.svg' ?>" alt="">
+                    </li>
+                    <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
+                        <span>
+                            <img class="h-6 w-6" src="<?php echo get_template_directory_uri() . '/assets/img/gift.svg' ?>" alt="">
 
-                    </span>
-                    <a href="">کارت هدیه</a>
+                        </span>
+                        <a href="">کارت هدیه</a>
 
-                </li>
-                <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
-                    <span>
-                        <img class="h-6 w-6" src="<?php echo get_template_directory_uri() . '/assets/img/master-card.svg' ?>" alt="">
+                    </li>
+                    <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
+                        <span>
+                            <img class="h-6 w-6" src="<?php echo get_template_directory_uri() . '/assets/img/master-card.svg' ?>" alt="">
 
-                    </span>
-                    <a href="">خرید اقساطی</a>
+                        </span>
+                        <a href="">خرید اقساطی</a>
 
-                </li>
-                <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
-                    <span>
-                        <img class="h-6 w-6" src="<?php echo get_template_directory_uri() . '/assets/img/gold.svg' ?>" alt="">
+                    </li>
+                    <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
+                        <span>
+                            <img class="h-6 w-6" src="<?php echo get_template_directory_uri() . '/assets/img/gold.svg' ?>" alt="">
 
-                    </span>
-                    <a href="">خرید طلای دیجیتال</a>
+                        </span>
+                        <a href="">خرید طلای دیجیتال</a>
 
-                </li>
-            </ul>
-        </nav>
+                    </li>
+                </ul>
+            </nav>
+        </section>
     </section>
     <!-- SLIDER -->
     <section id="slider" class="w-full">
@@ -178,6 +183,12 @@
                 <div class="swiper-slide ">
                     <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/slider.gif' ?>" alt="">
                 </div>
+                <div class="swiper-slide ">
+                    <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/slider10.webp' ?>" alt="">
+                </div>
+                <div class="swiper-slide ">
+                    <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/slider8.gif' ?>" alt="">
+                </div>
             </div>
             <!-- <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div> -->
@@ -185,7 +196,7 @@
         </div>
     </section>
     <!-- CATEGORY STORY -->
-    <section class="my-[120px] container  max-w-[1480px] mx-auto" id="cat-story">
+    <section class="my-16 container  max-w-[1480px] mx-auto" id="cat-story">
         <div class="swiper category-list">
             <div class="swiper-wrapper ">
                 <div class="swiper-slide">
@@ -225,7 +236,6 @@
             <!-- <div class="swiper-pagination"></div> -->
         </div>
     </section>
-
 
 
 
