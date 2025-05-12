@@ -1,14 +1,14 @@
 /*
-Theme Name: FitLand
+Theme Name: kalabama
 Theme URI: https://siteteme.ir/
 Author: siteteme
 Author URI: https://siteteme.ir/
-Description: Built on a solidly designed foundation, Twenty Twenty-Two embraces the idea that everyone deserves a truly unique website. The theme’s subtle styles are inspired by the diversity and versatility of birds: its typography is lightweight yet strong, its color palette is drawn from nature, and its layout elements sit gently on the page. The true richness of Twenty Twenty-Two lies in its opportunity for customization. The theme is built to take advantage of the Site Editor features introduced in WordPress 5.9, which means that colors, typography, and the layout of every single page on your site can be customized to suit your vision. It also includes dozens of block patterns, opening the door to a wide range of professionally designed layouts in just a few clicks. Whether you’re building a single-page website, a blog, a business website, or a portfolio, Twenty Twenty-Two will help you create a site that is uniquely yours.
+Description: develope by siteteme
 Requires at least: 5.9
 Tested up to: 6.7
 Requires PHP: 5.6
 Version: 1.0.0
-Text Domain: FitLand
+Text Domain: kalabama
  */
 
 @import "tailwindcss";
@@ -16,6 +16,19 @@ Text Domain: FitLand
   font-family: iranSansX;
   font-style: normal;
   src: url("../assets/fonts/iranssansx/IRANSansXV.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: yekanbakh;
+  font-style: normal;
+  src: url("../assets/fonts/yekanbakh/YekanBakh-VF.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: yekanbakh-regular;
+  font-style: normal;
+  src: url("../assets/fonts/yekanbakh/YekanBakhFaNum-Regular.woff2")
+    format("woff2");
 }
 
 @theme {
@@ -26,10 +39,12 @@ Text Domain: FitLand
   --color-text: #081035;
   --color-bg: #ffffff;
   --color-bg-color: #f0f0f0;
+  --font-yekanbakh: "yekanbakh-regular", "yekanbakh", "sans-serif";
+  --font-yekanbakh-regular: "yekanbakh-regular", "yekanbakh", "sans-serif";
 }
 @config "../tailwind.config.js";
 :root {
-  --font-iranSansX: "iranSansX", "sans-serif";
+  --font-iranSansX: "yekanbakh-regular", "yekanbakh", "sans-serif";
 }
 
 * {
