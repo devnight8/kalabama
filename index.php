@@ -200,34 +200,34 @@
         <div class="swiper category-list">
             <div class="swiper-wrapper ">
                 <div class="swiper-slide">
-                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" src="<?php echo get_template_directory_uri() . '/assets/img/cat1.webp' ?>" alt="">
+                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat1.webp' ?>" alt="">
                 </div>
                 <div class="swiper-slide ">
-                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" src="<?php echo get_template_directory_uri() . '/assets/img/cat1.webp' ?>" alt="">
+                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat1.webp' ?>" alt="">
                 </div>
                 <div class="swiper-slide ">
-                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" src="<?php echo get_template_directory_uri() . '/assets/img/cat2.webp' ?>" alt="">
+                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat2.webp' ?>" alt="">
                 </div>
                 <div class="swiper-slide ">
-                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" src="<?php echo get_template_directory_uri() . '/assets/img/cat3.webp' ?>" alt="">
+                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat3.webp' ?>" alt="">
                 </div>
                 <div class="swiper-slide">
-                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" src="<?php echo get_template_directory_uri() . '/assets/img/cat4.webp' ?>" alt="">
+                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat4.webp' ?>" alt="">
                 </div>
                 <div class="swiper-slide ">
-                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" src="<?php echo get_template_directory_uri() . '/assets/img/cat5.webp' ?>" alt="">
+                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat5.webp' ?>" alt="">
                 </div>
                 <div class="swiper-slide ">
-                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" src="<?php echo get_template_directory_uri() . '/assets/img/cat7.webp' ?>" alt="">
+                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat7.webp' ?>" alt="">
                 </div>
                 <div class="swiper-slide ">
-                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" src="<?php echo get_template_directory_uri() . '/assets/img/cat6.webp' ?>" alt="">
+                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat6.webp' ?>" alt="">
                 </div>
                 <div class="swiper-slide ">
-                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" src="<?php echo get_template_directory_uri() . '/assets/img/cat7.webp' ?>" alt="">
+                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat7.webp' ?>" alt="">
                 </div>
                 <div class="swiper-slide ">
-                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" src="<?php echo get_template_directory_uri() . '/assets/img/cat7.webp' ?>" alt="">
+                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat7.webp' ?>" alt="">
                 </div>
 
             </div>
@@ -236,8 +236,56 @@
             <!-- <div class="swiper-pagination"></div> -->
         </div>
     </section>
+    <!-- KALABAMA OFF -->
+    <section class="container max-w-[1480px] mx-auto border border-red-100 rounded-md p-4 flex flex-col">
+        <div class="bg-red-800 flex items-center justify-between rounded-md p-4 ">
+            <h4 class="text-white font-extrabold">محصولات جشنواره</h4>
+            <button class="flex items-center justify-between gap-2 text-white font-extrabold    ">
+                نمایش همه
+                <span class="rotate-90">
+                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 1L7.70711 6.29289C7.31658 6.68342 6.68342 6.68342 6.29289 6.29289L1 1" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </span>
+            </button>
+        </div>
+        <!-- PRODUCTS -->
+        <div class=" mt-4">
+            <div class="swiper discount-product">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="border-l border-gray-200 p-2">
+                            <div class="relative w-full">
+                                <a href=""> <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/pro01.webp' ?>" alt=""></a>
+                            </div>
+                            <div class="mt-4 flex flex-col gap-2">
+                                <a href="" class="yekanbakh-en line-clamp-2  w-full text-xs font-medium  -tracking-0.5 text-primary-shade-1 2md:h-[50px] 2md:text-sm 2md:leading-[27px] 2md:text-primary-shade-1">
+                                    <h3 class="text-sm font-medium leading-[24px] ">گوشی موبایل سامسونگ Galaxy S25 Ultra 5G ظرفیت 256 گیگابایت رم 12 گیگابایت - ویتنام</h3>
+                                </a>
+                                <div class="flex items-center justify-between ">
+                                    <span class="bg-[#da1c28] text-white text-sm font-medium px-2 py-1 rounded">2%</span>
+                                    <div class="flex items-end gap-2 flex-col ">
+                                        <div class="flex items-center gap-2 ">
+                                            <span class="text-sm font-bold">25,900,000</span>
+                                            <span class="text-xs">تومان</span>
+                                        </div>
+                                        <div class="flex items-center gap-2  ">
+                                            <span class="text-[11px] text-gray-400 font-bold line-through ">25,390,000</span>
+                                            <span class="text-[11px] text-gray-400">تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
+                <div class="swiper-button-next product-discount-btn-next"></div>
+                <div class="swiper-button-prev product-discount-btn-prev"></div>
+            </div>
 
+        </div>
+    </section>
 
     <script src="<?php echo get_template_directory_uri() . '/assets/js/swiper-bundle.min.js' ?>"></script>
     <script src="<?php echo get_template_directory_uri() . '/assets/js/main.js' ?>"></script>

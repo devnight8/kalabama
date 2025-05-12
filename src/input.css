@@ -36,7 +36,10 @@ Text Domain: FitLand
   font-family: var(--font-iranSansX), serif;
 }
 
-.slider-pagination .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.slider-pagination
+  .swiper-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {
   margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
@@ -45,14 +48,16 @@ Text Domain: FitLand
 }
 
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-  
   background: #ffffff !important;
   height: 20px !important;
 }
 
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
   bottom: 33px !important;
-  top: var(--swiper-pagination-top,auto);
+  top: var(--swiper-pagination-top, auto);
   right: 20px !important;
   width: 100%;
   display: block;
@@ -60,8 +65,8 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   z-index: 1;
 }
 
-
-.swiper-button-next.cat-btn-next,.swiper-button-prev.cat-btn-prev{
+.swiper-button-next.cat-btn-next,
+.swiper-button-prev.cat-btn-prev {
   background: #fff;
   box-shadow: 2px 2px 10px #00000026;
   border-radius: 100%;
@@ -69,15 +74,39 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   height: 28px;
 }
 
-.swiper-button-next.cat-btn-next:after, .swiper-rtl .swiper-button-next.cat-btn-next:after {
-  content: 'prev';
+.swiper-button-next.cat-btn-next:after,
+.swiper-rtl .swiper-button-next.cat-btn-next:after {
+  content: "prev";
   font-size: 12px;
   color: #000;
 }
 
-.swiper-button-prev.cat-btn-prev:after, .swiper-rtl .swiper-button-prev.cat-btn-prev:after {
-  content: 'next';
+.swiper-button-prev.cat-btn-prev:after,
+.swiper-rtl .swiper-button-prev.cat-btn-prev:after {
+  content: "next";
   font-size: 12px;
   color: #000;
 }
 
+.swiper-button-next.product-discount-btn-next,
+.swiper-button-prev.product-discount-btn-prev {
+  background: #fff;
+  box-shadow: 2px 2px 10px #00000026;
+  border-radius: 100%;
+  width: 28px;
+  height: 28px;
+}
+
+.swiper-button-next.product-discount-btn-next:after,
+.swiper-rtl .swiper-button-next.product-discount-btn-next:after {
+  content: "prev";
+  font-size: 12px;
+  color: #000;
+}
+
+.swiper-button-prev.product-discount-btn-prev:after,
+.swiper-rtl .swiper-button-prev.product-discount-btn-prev:after {
+  content: "next";
+  font-size: 12px;
+  color: #000;
+}

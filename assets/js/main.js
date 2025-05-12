@@ -29,6 +29,25 @@ var categoryList = new Swiper(".category-list", {
   // },
 });
 
+var swiper = new Swiper(".discount-product", {
+  // loop: true,
+  spaceBetween: 20,
+  slidesPerView: 6,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  // pagination: {
+  //   el: ".slider-pagination", // مشخص و جدا
+  //   clickable: true,
+  // },
+
+  navigation: {
+    nextEl: ".product-discount-btn-next",
+    prevEl: ".product-discount-btn-prev",
+  },
+});
+
 const container = document.getElementById("cart-container");
 const cartBox = document.getElementById("cart-box");
 
