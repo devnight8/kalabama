@@ -269,10 +269,10 @@
                                             <span class="text-sm font-bold font-yekanbakh-regular">25,900,000</span>
                                             <span class="text-xs">تومان</span>
                                         </div>
-                                        <div class="flex items-center gap-2  ">
+                                        <!-- <div class="flex items-center gap-2  ">
                                             <span class="text-[11px] text-gray-400 font-bold line-through font-yekanbakh-regular">25,390,000</span>
                                             <span class="text-[11px] text-gray-400">تومان</span>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>

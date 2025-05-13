@@ -22,15 +22,9 @@ var categoryList = new Swiper(".category-list", {
     nextEl: ".cat-btn-next",
     prevEl: ".cat-btn-prev",
   },
-  // اگر صفحه‌بندی خاص خواستی، اینو هم فعال کن
-  // pagination: {
-  //   el: ".category-pagination",
-  //   clickable: true,
-  // },
 });
 
 var swiper = new Swiper(".discount-product", {
-  // loop: true,
   spaceBetween: 20,
   slidesPerView: 6,
   autoplay: {
@@ -45,6 +39,29 @@ var swiper = new Swiper(".discount-product", {
   navigation: {
     nextEl: ".product-discount-btn-next",
     prevEl: ".product-discount-btn-prev",
+  },
+
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    1280: {
+      slidesPerView: 5,
+      spaceBetween: 20,
+    },
+    1536: {
+      slidesPerView: 6,
+      spaceBetween: 20,
+    },
   },
 });
 
