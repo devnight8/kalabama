@@ -10,8 +10,13 @@
 
 <body>
     <!-- TOP HEADER -->
+    <?php
+
+    $img_top_header = get_Option('bakalama_options')['img-top-header'];
+    $link_top_header = get_Option('bakalama_options')['link-top-header'];
+    ?>
     <div class="top-header w-full ">
-        <a href=""><img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/banner-top-header.gif' ?>" alt=""></a>
+        <a href="<?php echo esc_url($link_top_header) ?>"><img class="w-full" src="<?php echo $img_top_header ?>" alt=""></a>
     </div>
     <!-- Header -->
     <section class="sticky top-0 left-0 right-0 z-10 bg-white">

@@ -5,7 +5,7 @@ if (class_exists('CSF')) {
 
     //
     // Set a unique slug-like ID
-    $prefix = 'bakalama';
+    $prefix = 'bakalama_options';
 
     //
     // Create options
@@ -20,23 +20,36 @@ if (class_exists('CSF')) {
         'show_search' => true,
     ));
 
+
     //
     // Create a section
     CSF::createSection($prefix, array(
+
+
         'title'  => 'تنظیمات بخش تاپ هدر',
         'fields' => array(
+            array(
+                'id'      => 'switcher-top-header',
+                'type'    => 'switcher',
+                'title'   => 'فعال سازی بخش تاپ هدر',
+                'subtitle' => 'آیا میخواهید این بخش را فعال کنید ؟',
+                'label'   => 'فعال سازی',
+                'default' => false,
+            ),
             array(
                 'id' => 'link-top-header',
                 'type' => 'text',
                 'title' => 'لینک',
                 'default' => 'https://example.com',
+                'dependency' =>  array('switcher-top-header', '==', 'true'),
             ),
             array(
-                'id'    => 'opt-img',
+                'id'    => 'img-top-header',
                 'type'  => 'upload',
                 'title' => 'تصویر',
-
+                'dependency' =>  array('switcher-top-header', '==', 'true'),
             ),
+
 
         )
     ));
