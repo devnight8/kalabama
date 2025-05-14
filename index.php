@@ -1,504 +1,339 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فروشگاه اینترنتی کالا با ما </title>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/src/output.css' ?>">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/assets/css/swiper-bundle.min.css' ?>">
-</head>
-
-<body>
-    <!-- TOP HEADER -->
-    <div class="top-header w-full ">
-        <a href=""><img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/banner-top-header.gif' ?>" alt=""></a>
-    </div>
-    <!-- Header -->
-    <section class="sticky top-0 left-0 right-0 z-10 bg-white">
-        <header class="container max-w-[1480px] mx-auto flex items-center py-4 ">
-            <div>
-                <a href=""><img src="<?php echo get_template_directory_uri() . '/assets/img/logo.svg' ?>" alt=""></a>
+<?php
+get_header()
+?>
+<!-- SLIDER -->
+<section id="slider" class="w-full">
+    <div class="swiper slider">
+        <div class="swiper-wrapper ">
+            <div class="swiper-slide ">
+                <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/slider.gif' ?>" alt="">
             </div>
-            <div class="flex flex-1 mr-6 h-14">
-                <div class="flex items-center justify-start bg-bg-color p-2 w-2xl gap-3 rounded-md">
-                    <img class="w-6 h-6 " src="<?php echo get_template_directory_uri() . '/assets/img/icon-search.svg' ?>" alt="">
-                    <label for="search"></label>
-                    <input type="search" id="search" placeholder="محصول، برند یا دسته مورد نظرتان را جستجو کنید" class="outline-none w-full">
-                </div>
+            <div class="swiper-slide ">
+                <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/slider2.gif' ?>" alt="">
             </div>
-            <div class="flex items-center gap-5 relative">
-                <button class="border border-gray-500 px-7 py-2 rounded-md cursor-pointer"> ورود | ثبت نام </button>
-                <div id="cart-container" class="mt-2">
-                    <button id="cart-button" class="hover:[&+div]:block relative">
-                        <img class="w-10 h-10 border p-2 border-gray-200  rounded-md" src="<?php echo get_template_directory_uri() . '/assets/img/bag.svg' ?>" alt="">
-                        <span class="absolute bg-blue-400 text-white rounded-full h-5 w-5 text-[12px] -top-2 -right-1 items-center justify-center flex">1</span>
-                    </button>
-                    <!-- CART  -->
-                    <div id="cart-box" class="absolute rounded-md left-0  shadow text-sm text-gray-500 w-[450px] p-4 hidden z-20 bg-white ">
-                        <div class="bg-gray-100 flex items-center justify-between p-2 rounded">
-                            <div class="flex items-center justify-center text-[12px] gap-2 font-medium ">
-                                <span class="text-black ">سبد خرید شما:</span>
-                                <span>1 عدد کالا</span>
-                            </div>
-                            <div class="flex items-center justify-center gap-2 text-[12px]">
-                                <a href="" class="flex items-center justify-center gap-2 text-[12px]">
-                                    <span class="text-blue-800">مشاهده سبد خرید</span>
-                                    <span class="text-blue-800">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                                        </svg>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- CART BODY -->
-                        <div class="flex justify-between items-center">
-                            <div class="text-black flex gap-3 flex-col items-start justify-start">
-                                <img class="mt-2" src="<?php echo get_template_directory_uri() . '/assets/img/static_techno-off_new.svg' ?>" alt="">
-                                <h3 class="text-[12px]">ساعت هوشمند میبرو مدل GS Pro </h3>
-                                <div class="flex items-center  gap-4 mt-3 text-blue-800">
-                                    <span class="[&>svg]:stroke-blue-600 ">
-
-                                        <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g id="SVGRepo_bgCarrier" stroke-width="0" />
-                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
-                                            <g id="SVGRepo_iconCarrier">
-                                                <path d="M15 11L16 17" stroke-width="1.5" stroke-linecap="round" />
-                                                <path d="M9 11L8 17" stroke-width="1.5" stroke-linecap="round" />
-                                                <path d="M9 6V5C9 3.34315 10.3431 2 12 2C13.6569 2 15 3.34315 15 5V6" stroke-width="1.5" stroke-linecap="round" />
-                                                <path d="M20.2235 12.5257C19.6382 9.40452 19.3456 7.84393 18.2347 6.92196C17.1238 6 15.5361 6 12.3605 6H11.6393C8.46374 6 6.87596 6 5.76506 6.92196C4.65416 7.84393 4.36155 9.40452 3.77633 12.5257C2.9534 16.9146 2.54194 19.1091 3.74157 20.5545C4.94119 22 7.17389 22 11.6393 22H12.3605C16.8259 22 19.0586 22 20.2582 20.5545C20.9542 19.7159 21.1079 18.6252 20.9536 17" stroke-width="1.5" stroke-linecap="round" />
-                                            </g>
-                                        </svg>
-                                    </span>
-                                    <span>تکنو لایف</span>
-                                </div>
-                                <div class="flex items-center  gap-4 text-blue-800">
-                                    <span class="[&>svg]:stroke-blue-600 ">
-
-                                        <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-                                            <g id="SVGRepo_bgCarrier" stroke-width="0" />
-
-                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
-
-                                            <g id="SVGRepo_iconCarrier">
-                                                <path d="M15 11L16 17" stroke-width="1.5" stroke-linecap="round" />
-                                                <path d="M9 11L8 17" stroke-width="1.5" stroke-linecap="round" />
-                                                <path d="M9 6V5C9 3.34315 10.3431 2 12 2C13.6569 2 15 3.34315 15 5V6" stroke-width="1.5" stroke-linecap="round" />
-                                                <path d="M20.2235 12.5257C19.6382 9.40452 19.3456 7.84393 18.2347 6.92196C17.1238 6 15.5361 6 12.3605 6H11.6393C8.46374 6 6.87596 6 5.76506 6.92196C4.65416 7.84393 4.36155 9.40452 3.77633 12.5257C2.9534 16.9146 2.54194 19.1091 3.74157 20.5545C4.94119 22 7.17389 22 11.6393 22H12.3605C16.8259 22 19.0586 22 20.2582 20.5545C20.9542 19.7159 21.1079 18.6252 20.9536 17" stroke-width="1.5" stroke-linecap="round" />
-                                            </g>
-
-                                        </svg>
-                                    </span>
-                                    <span>موجود در انبار </span>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="w-[130px]">
-                                    <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/pro.webp' ?>" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- CART EMPTY -->
-                    <!-- <div class="absolute p-2 rounded-full left-0 top-14 shadow text-sm text-gray-500 hidden "> سبد خرید (خالیه) </div> -->
-                </div>
+            <div class="swiper-slide ">
+                <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/slider3.webp' ?>" alt="">
             </div>
-        </header>
-    </section>
-    <!-- NAVBAR -->
-    <section class="sticky top-22 left-0 right-0 z-10 bg-white">
-        <section class="container max-w-[1480px] mx-auto py-4">
-            <nav>
-                <ul class="flex items-center gap-10">
-                    <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
-                        <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                            </svg>
-                        </span>
-                        <a href="">دسته بندی ها</a>
-
-                    </li>
-                    <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
-                        <span>
-                            <img class="h-6 w-6" src="<?php echo get_template_directory_uri() . '/assets/img/discount.svg' ?>" alt="">
-                        </span>
-                        <a href="">تکنوآف</a>
-
-                    </li>
-                    <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
-                        <span>
-                            <img class="h-6 w-6" src="<?php echo get_template_directory_uri() . '/assets/img/bag-icon.svg' ?>" alt="">
-
-                        </span>
-                        <a href="">خرید سازمانی</a>
-
-                    </li>
-                    <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
-                        <span>
-                            <img class="h-6 w-6" src="<?php echo get_template_directory_uri() . '/assets/img/gift.svg' ?>" alt="">
-
-                        </span>
-                        <a href="">کارت هدیه</a>
-
-                    </li>
-                    <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
-                        <span>
-                            <img class="h-6 w-6" src="<?php echo get_template_directory_uri() . '/assets/img/master-card.svg' ?>" alt="">
-
-                        </span>
-                        <a href="">خرید اقساطی</a>
-
-                    </li>
-                    <li class="text-sm flex items-center gap-2 hover:bg-blue-50 transition-all p-2 rounded-md">
-                        <span>
-                            <img class="h-6 w-6" src="<?php echo get_template_directory_uri() . '/assets/img/gold.svg' ?>" alt="">
-
-                        </span>
-                        <a href="">خرید طلای دیجیتال</a>
-
-                    </li>
-                </ul>
-            </nav>
-        </section>
-    </section>
-    <!-- SLIDER -->
-    <section id="slider" class="w-full">
-        <div class="swiper slider">
-            <div class="swiper-wrapper ">
-                <div class="swiper-slide ">
-                    <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/slider.gif' ?>" alt="">
-                </div>
-                <div class="swiper-slide ">
-                    <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/slider2.gif' ?>" alt="">
-                </div>
-                <div class="swiper-slide ">
-                    <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/slider3.webp' ?>" alt="">
-                </div>
-                <div class="swiper-slide ">
-                    <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/slider4.webp' ?>" alt="">
-                </div>
-                <div class="swiper-slide ">
-                    <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/slider.gif' ?>" alt="">
-                </div>
-                <div class="swiper-slide ">
-                    <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/slider10.webp' ?>" alt="">
-                </div>
-                <div class="swiper-slide ">
-                    <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/slider8.gif' ?>" alt="">
-                </div>
+            <div class="swiper-slide ">
+                <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/slider4.webp' ?>" alt="">
             </div>
-            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-slide ">
+                <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/slider.gif' ?>" alt="">
+            </div>
+            <div class="swiper-slide ">
+                <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/slider10.webp' ?>" alt="">
+            </div>
+            <div class="swiper-slide ">
+                <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/slider8.gif' ?>" alt="">
+            </div>
+        </div>
+        <!-- <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div> -->
-            <div class="slider-pagination"></div>
-        </div>
-    </section>
-    <!-- CATEGORY STORY -->
-    <section class="my-16 container  max-w-[1480px] mx-auto" id="cat-story">
-        <div class="swiper category-list">
-            <div class="swiper-wrapper ">
-                <div class="swiper-slide">
-                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat1.webp' ?>" alt="">
-                </div>
-                <div class="swiper-slide ">
-                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat1.webp' ?>" alt="">
-                </div>
-                <div class="swiper-slide ">
-                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat2.webp' ?>" alt="">
-                </div>
-                <div class="swiper-slide ">
-                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat3.webp' ?>" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat4.webp' ?>" alt="">
-                </div>
-                <div class="swiper-slide ">
-                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat5.webp' ?>" alt="">
-                </div>
-                <div class="swiper-slide ">
-                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat7.webp' ?>" alt="">
-                </div>
-                <div class="swiper-slide ">
-                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat6.webp' ?>" alt="">
-                </div>
-                <div class="swiper-slide ">
-                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat7.webp' ?>" alt="">
-                </div>
-                <div class="swiper-slide ">
-                    <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat7.webp' ?>" alt="">
-                </div>
-
+        <div class="slider-pagination"></div>
+    </div>
+</section>
+<!-- CATEGORY STORY -->
+<section class="my-16 container  max-w-[1480px] mx-auto" id="cat-story">
+    <div class="swiper category-list">
+        <div class="swiper-wrapper ">
+            <div class="swiper-slide">
+                <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat1.webp' ?>" alt="">
             </div>
-            <div class="swiper-button-next cat-btn-next"></div>
-            <div class="swiper-button-prev cat-btn-prev"></div>
-            <!-- <div class="swiper-pagination"></div> -->
+            <div class="swiper-slide ">
+                <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat1.webp' ?>" alt="">
+            </div>
+            <div class="swiper-slide ">
+                <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat2.webp' ?>" alt="">
+            </div>
+            <div class="swiper-slide ">
+                <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat3.webp' ?>" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat4.webp' ?>" alt="">
+            </div>
+            <div class="swiper-slide ">
+                <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat5.webp' ?>" alt="">
+            </div>
+            <div class="swiper-slide ">
+                <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat7.webp' ?>" alt="">
+            </div>
+            <div class="swiper-slide ">
+                <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat6.webp' ?>" alt="">
+            </div>
+            <div class="swiper-slide ">
+                <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat7.webp' ?>" alt="">
+            </div>
+            <div class="swiper-slide ">
+                <img class=" p-1 border-3  border-blue-300 hover:border-blue-600  rounded-full transition-all" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/cat7.webp' ?>" alt="">
+            </div>
+
         </div>
-    </section>
-    <!-- KALABAMA OFF -->
-    <section class="container max-w-[1480px] mx-auto border border-red-100 rounded-md p-4 flex flex-col">
-        <div class="bg-red-800 flex items-center justify-between rounded-md p-4 ">
-            <h4 class="text-white font-extrabold">محصولات جشنواره</h4>
-            <button class="flex items-center justify-between gap-2 text-white font-extrabold    ">
-                نمایش همه
-                <span class="rotate-90">
-                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13 1L7.70711 6.29289C7.31658 6.68342 6.68342 6.68342 6.29289 6.29289L1 1" stroke="#fff" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                </span>
-            </button>
-        </div>
-        <!-- PRODUCTS -->
-        <div class=" mt-4">
-            <div class="swiper discount-product">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="border-l border-gray-200 p-2">
-                            <div class="relative w-full">
-                                <a href=""> <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/pro01.webp' ?>" alt=""></a>
-                            </div>
-                            <div class="mt-4 flex flex-col gap-2">
-                                <a href="" class="yekanbakh-en line-clamp-2  w-full text-xs font-medium  -tracking-0.5 text-primary-shade-1 2md:h-[50px] 2md:text-sm 2md:leading-[27px] 2md:text-primary-shade-1">
-                                    <h3 class="text-sm font-medium leading-[24px] ">گوشی موبایل سامسونگ Galaxy S25 Ultra 5G ظرفیت 256 گیگابایت رم 12 گیگابایت - ویتنام</h3>
-                                </a>
-                                <div class="flex items-center justify-between ">
-                                    <span class="bg-[#da1c28] text-white text-sm font-medium px-2 py-1 rounded font-yekanbakh-regular">2%</span>
-                                    <div class="flex items-end gap-2 flex-col ">
-                                        <div class="flex items-center gap-2 ">
-                                            <span class="text-sm font-bold font-yekanbakh-regular">25,900,000</span>
-                                            <span class="text-xs">تومان</span>
-                                        </div>
-                                        <!-- <div class="flex items-center gap-2  ">
+        <div class="swiper-button-next cat-btn-next"></div>
+        <div class="swiper-button-prev cat-btn-prev"></div>
+        <!-- <div class="swiper-pagination"></div> -->
+    </div>
+</section>
+<!-- KALABAMA OFF -->
+<section class="container max-w-[1480px] mx-auto border border-red-100 rounded-md p-4 flex flex-col">
+    <div class="bg-red-800 flex items-center justify-between rounded-md p-4 ">
+        <h4 class="text-white font-extrabold">محصولات جشنواره</h4>
+        <button class="flex items-center justify-between gap-2 text-white font-extrabold    ">
+            نمایش همه
+            <span class="rotate-90">
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 1L7.70711 6.29289C7.31658 6.68342 6.68342 6.68342 6.29289 6.29289L1 1" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </span>
+        </button>
+    </div>
+    <!-- PRODUCTS -->
+    <div class=" mt-4">
+        <div class="swiper discount-product">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="border-l border-gray-200 p-2">
+                        <div class="relative w-full">
+                            <a href=""> <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/pro01.webp' ?>" alt=""></a>
+                        </div>
+                        <div class="mt-4 flex flex-col gap-2">
+                            <a href="" class="yekanbakh-en line-clamp-2  w-full text-xs font-medium  -tracking-0.5 text-primary-shade-1 2md:h-[50px] 2md:text-sm 2md:leading-[27px] 2md:text-primary-shade-1">
+                                <h3 class="text-sm font-medium leading-[24px] ">گوشی موبایل سامسونگ Galaxy S25 Ultra 5G ظرفیت 256 گیگابایت رم 12 گیگابایت - ویتنام</h3>
+                            </a>
+                            <div class="flex items-center justify-between ">
+                                <span class="bg-[#da1c28] text-white text-sm font-medium px-2 py-1 rounded font-yekanbakh-regular">2%</span>
+                                <div class="flex items-end gap-2 flex-col ">
+                                    <div class="flex items-center gap-2 ">
+                                        <span class="text-sm font-bold font-yekanbakh-regular">25,900,000</span>
+                                        <span class="text-xs">تومان</span>
+                                    </div>
+                                    <!-- <div class="flex items-center gap-2  ">
                                             <span class="text-[11px] text-gray-400 font-bold line-through font-yekanbakh-regular">25,390,000</span>
                                             <span class="text-[11px] text-gray-400">تومان</span>
                                         </div> -->
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="swiper-slide">
-                        <div class="border-l border-gray-200 p-2">
-                            <div class="relative w-full">
-                                <a href=""> <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/pro01.webp' ?>" alt=""></a>
-                            </div>
-                            <div class="mt-4 flex flex-col gap-2">
-                                <a href="" class="yekanbakh-en line-clamp-2  w-full text-xs font-medium  -tracking-0.5 text-primary-shade-1 2md:h-[50px] 2md:text-sm 2md:leading-[27px] 2md:text-primary-shade-1">
-                                    <h3 class="text-sm font-medium leading-[24px] ">گوشی موبایل اپل iPhone 15 Pro Max دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت</h3>
-                                </a>
-                                <div class="flex items-center justify-between ">
-                                    <span class="bg-[#da1c28] text-white text-sm font-medium px-2 py-1 rounded font-yekanbakh-regular">5%</span>
-                                    <div class="flex items-end gap-2 flex-col ">
-                                        <div class="flex items-center gap-2 ">
-                                            <span class="text-sm font-bold font-yekanbakh-regular">89,900,000</span>
-                                            <span class="text-xs">تومان</span>
-                                        </div>
-                                        <div class="flex items-center gap-2  ">
-                                            <span class="text-[11px] text-gray-400 font-bold line-through font-yekanbakh-regular">94,500,000</span>
-                                            <span class="text-[11px] text-gray-400">تومان</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="border-l border-gray-200 p-2">
-                            <div class="relative w-full">
-                                <a href=""> <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/pro01.webp' ?>" alt=""></a>
-                            </div>
-                            <div class="mt-4 flex flex-col gap-2">
-                                <a href="" class="yekanbakh-en line-clamp-2  w-full text-xs font-medium  -tracking-0.5 text-primary-shade-1 2md:h-[50px] 2md:text-sm 2md:leading-[27px] 2md:text-primary-shade-1">
-                                    <h3 class="text-sm font-medium leading-[24px] ">گوشی موبایل شیائومی مدل Redmi Note 13 Pro دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت</h3>
-                                </a>
-                                <div class="flex items-center justify-between ">
-                                    <span class="bg-[#da1c28] text-white text-sm font-medium px-2 py-1 rounded font-yekanbakh-regular">8%</span>
-                                    <div class="flex items-end gap-2 flex-col ">
-                                        <div class="flex items-center gap-2 ">
-                                            <span class="text-sm font-bold font-yekanbakh-regular">15,490,000</span>
-                                            <span class="text-xs">تومان</span>
-                                        </div>
-                                        <div class="flex items-center gap-2  ">
-                                            <span class="text-[11px] text-gray-400 font-bold line-through font-yekanbakh-regular">16,900,000</span>
-                                            <span class="text-[11px] text-gray-400">تومان</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="border-l border-gray-200 p-2">
-                            <div class="relative w-full">
-                                <a href=""> <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/pro01.webp' ?>" alt=""></a>
-                            </div>
-                            <div class="mt-4 flex flex-col gap-2">
-                                <a href="" class="yekanbakh-en line-clamp-2  w-full text-xs font-medium  -tracking-0.5 text-primary-shade-1 2md:h-[50px] 2md:text-sm 2md:leading-[27px] 2md:text-primary-shade-1">
-                                    <h3 class="text-sm font-medium leading-[24px] ">گوشی موبایل هوآوی مدل Nova 11 Pro دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت</h3>
-                                </a>
-                                <div class="flex items-center justify-between ">
-                                    <span class="bg-[#da1c28] text-white text-sm font-medium px-2 py-1 rounded font-yekanbakh-regular">12%</span>
-                                    <div class="flex items-end gap-2 flex-col ">
-                                        <div class="flex items-center gap-2 ">
-                                            <span class="text-sm font-bold font-yekanbakh-regular">19,800,000</span>
-                                            <span class="text-xs">تومان</span>
-                                        </div>
-                                        <div class="flex items-center gap-2  ">
-                                            <span class="text-[11px] text-gray-400 font-bold line-through font-yekanbakh-regular">22,500,000</span>
-                                            <span class="text-[11px] text-gray-400">تومان</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="border-l border-gray-200 p-2">
-                            <div class="relative w-full">
-                                <a href=""> <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/pro01.webp' ?>" alt=""></a>
-                            </div>
-                            <div class="mt-4 flex flex-col gap-2">
-                                <a href="" class="yekanbakh-en line-clamp-2  w-full text-xs font-medium  -tracking-0.5 text-primary-shade-1 2md:h-[50px] 2md:text-sm 2md:leading-[27px] 2md:text-primary-shade-1">
-                                    <h3 class="text-sm font-medium leading-[24px] ">گوشی موبایل نوکیا مدل G42 5G دو سیم کارت ظرفیت 128 گیگابایت و رم 6 گیگابایت</h3>
-                                </a>
-                                <div class="flex items-center justify-between ">
-                                    <span class="bg-[#da1c28] text-white text-sm font-medium px-2 py-1 rounded font-yekanbakh-regular">15%</span>
-                                    <div class="flex items-end gap-2 flex-col ">
-                                        <div class="flex items-center gap-2 ">
-                                            <span class="text-sm font-bold font-yekanbakh-regular">7,290,000</span>
-                                            <span class="text-xs">تومان</span>
-                                        </div>
-                                        <div class="flex items-center gap-2  ">
-                                            <span class="text-[11px] text-gray-400 font-bold line-through font-yekanbakh-regular">8,590,000</span>
-                                            <span class="text-[11px] text-gray-400">تومان</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="border-l border-gray-200 p-2">
-                            <div class="relative w-full">
-                                <a href=""> <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/pro01.webp' ?>" alt=""></a>
-                            </div>
-                            <div class="mt-4 flex flex-col gap-2">
-                                <a href="" class="yekanbakh-en line-clamp-2  w-full text-xs font-medium  -tracking-0.5 text-primary-shade-1 2md:h-[50px] 2md:text-sm 2md:leading-[27px] 2md:text-primary-shade-1">
-                                    <h3 class="text-sm font-medium leading-[24px] ">گوشی موبایل وان پلاس مدل Nord CE3 Lite 5G دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت</h3>
-                                </a>
-                                <div class="flex items-center justify-between ">
-                                    <span class="bg-[#da1c28] text-white text-sm font-medium px-2 py-1 rounded font-yekanbakh-regular">10%</span>
-                                    <div class="flex items-end gap-2 flex-col ">
-                                        <div class="flex items-center gap-2 ">
-                                            <span class="text-sm font-bold font-yekanbakh-regular">11,890,000</span>
-                                            <span class="text-xs">تومان</span>
-                                        </div>
-                                        <div class="flex items-center gap-2  ">
-                                            <span class="text-[11px] text-gray-400 font-bold line-through font-yekanbakh-regular">13,200,000</span>
-                                            <span class="text-[11px] text-gray-400">تومان</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="border-l border-gray-200 p-2">
-                            <div class="relative w-full">
-                                <a href=""> <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/pro01.webp' ?>" alt=""></a>
-                            </div>
-                            <div class="mt-4 flex flex-col gap-2">
-                                <a href="" class="yekanbakh-en line-clamp-2  w-full text-xs font-medium  -tracking-0.5 text-primary-shade-1 2md:h-[50px] 2md:text-sm 2md:leading-[27px] 2md:text-primary-shade-1">
-                                    <h3 class="text-sm font-medium leading-[24px] ">گوشی موبایل موتورولا مدل Edge 40 Neo دو سیم کارت ظرفیت 256 گیگابایت و رم 12 گیگابایت</h3>
-                                </a>
-                                <div class="flex items-center justify-between ">
-                                    <span class="bg-[#da1c28] text-white text-sm font-medium px-2 py-1 rounded font-yekanbakh-regular">18%</span>
-                                    <div class="flex items-end gap-2 flex-col ">
-                                        <div class="flex items-center gap-2 ">
-                                            <span class="text-sm font-bold font-yekanbakh-regular">16,490,000</span>
-                                            <span class="text-xs">تومان</span>
-                                        </div>
-                                        <div class="flex items-center gap-2  ">
-                                            <span class="text-[11px] text-gray-400 font-bold line-through font-yekanbakh-regular">20,100,000</span>
-                                            <span class="text-[11px] text-gray-400">تومان</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="border-l border-gray-200 p-2">
-                            <div class="relative w-full">
-                                <a href=""> <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/pro01.webp' ?>" alt=""></a>
-                            </div>
-                            <div class="mt-4 flex flex-col gap-2">
-                                <a href="" class="yekanbakh-en line-clamp-2  w-full text-xs font-medium  -tracking-0.5 text-primary-shade-1 2md:h-[50px] 2md:text-sm 2md:leading-[27px] 2md:text-primary-shade-1">
-                                    <h3 class="text-sm font-medium leading-[24px] ">گوشی موبایل ریلمی مدل C53 دو سیم کارت ظرفیت 128 گیگابایت و رم 6 گیگابایت</h3>
-                                </a>
-                                <div class="flex items-center justify-between ">
-                                    <span class="bg-[#da1c28] text-white text-sm font-medium px-2 py-1 rounded font-yekanbakh-regular">20%</span>
-                                    <div class="flex items-end gap-2 flex-col ">
-                                        <div class="flex items-center gap-2 ">
-                                            <span class="text-sm font-bold font-yekanbakh-regular">5,890,000</span>
-                                            <span class="text-xs">تومان</span>
-                                        </div>
-                                        <div class="flex items-center gap-2  ">
-                                            <span class="text-[11px] text-gray-400 font-bold line-through font-yekanbakh-regular">7,390,000</span>
-                                            <span class="text-[11px] text-gray-400">تومان</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="border-l border-gray-200 p-2">
-                            <div class="relative w-full">
-                                <a href=""> <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/pro01.webp' ?>" alt=""></a>
-                            </div>
-                            <div class="mt-4 flex flex-col gap-2">
-                                <a href="" class="yekanbakh-en line-clamp-2  w-full text-xs font-medium  -tracking-0.5 text-primary-shade-1 2md:h-[50px] 2md:text-sm 2md:leading-[27px] 2md:text-primary-shade-1">
-                                    <h3 class="text-sm font-medium leading-[24px] ">گوشی موبایل گوگل مدل Pixel 8 Pro دو سیم کارت ظرفیت 256 گیگابایت و رم 12 گیگابایت</h3>
-                                </a>
-                                <div class="flex items-center justify-between ">
-                                    <span class="bg-[#da1c28] text-white text-sm font-medium px-2 py-1 rounded font-yekanbakh-regular">25%</span>
-                                    <div class="flex items-end gap-2 flex-col ">
-                                        <div class="flex items-center gap-2 ">
-                                            <span class="text-sm font-bold font-yekanbakh-regular">45,900,000</span>
-                                            <span class="text-xs">تومان</span>
-                                        </div>
-                                        <div class="flex items-center gap-2  ">
-                                            <span class="text-[11px] text-gray-400 font-bold line-through font-yekanbakh-regular">61,200,000</span>
-                                            <span class="text-[11px] text-gray-400">تومان</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-                <div class="swiper-button-next product-discount-btn-next"></div>
-                <div class="swiper-button-prev product-discount-btn-prev"></div>
+
+                <div class="swiper-slide">
+                    <div class="border-l border-gray-200 p-2">
+                        <div class="relative w-full">
+                            <a href=""> <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/pro01.webp' ?>" alt=""></a>
+                        </div>
+                        <div class="mt-4 flex flex-col gap-2">
+                            <a href="" class="yekanbakh-en line-clamp-2  w-full text-xs font-medium  -tracking-0.5 text-primary-shade-1 2md:h-[50px] 2md:text-sm 2md:leading-[27px] 2md:text-primary-shade-1">
+                                <h3 class="text-sm font-medium leading-[24px] ">گوشی موبایل اپل iPhone 15 Pro Max دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت</h3>
+                            </a>
+                            <div class="flex items-center justify-between ">
+                                <span class="bg-[#da1c28] text-white text-sm font-medium px-2 py-1 rounded font-yekanbakh-regular">5%</span>
+                                <div class="flex items-end gap-2 flex-col ">
+                                    <div class="flex items-center gap-2 ">
+                                        <span class="text-sm font-bold font-yekanbakh-regular">89,900,000</span>
+                                        <span class="text-xs">تومان</span>
+                                    </div>
+                                    <div class="flex items-center gap-2  ">
+                                        <span class="text-[11px] text-gray-400 font-bold line-through font-yekanbakh-regular">94,500,000</span>
+                                        <span class="text-[11px] text-gray-400">تومان</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="border-l border-gray-200 p-2">
+                        <div class="relative w-full">
+                            <a href=""> <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/pro01.webp' ?>" alt=""></a>
+                        </div>
+                        <div class="mt-4 flex flex-col gap-2">
+                            <a href="" class="yekanbakh-en line-clamp-2  w-full text-xs font-medium  -tracking-0.5 text-primary-shade-1 2md:h-[50px] 2md:text-sm 2md:leading-[27px] 2md:text-primary-shade-1">
+                                <h3 class="text-sm font-medium leading-[24px] ">گوشی موبایل شیائومی مدل Redmi Note 13 Pro دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت</h3>
+                            </a>
+                            <div class="flex items-center justify-between ">
+                                <span class="bg-[#da1c28] text-white text-sm font-medium px-2 py-1 rounded font-yekanbakh-regular">8%</span>
+                                <div class="flex items-end gap-2 flex-col ">
+                                    <div class="flex items-center gap-2 ">
+                                        <span class="text-sm font-bold font-yekanbakh-regular">15,490,000</span>
+                                        <span class="text-xs">تومان</span>
+                                    </div>
+                                    <div class="flex items-center gap-2  ">
+                                        <span class="text-[11px] text-gray-400 font-bold line-through font-yekanbakh-regular">16,900,000</span>
+                                        <span class="text-[11px] text-gray-400">تومان</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="border-l border-gray-200 p-2">
+                        <div class="relative w-full">
+                            <a href=""> <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/pro01.webp' ?>" alt=""></a>
+                        </div>
+                        <div class="mt-4 flex flex-col gap-2">
+                            <a href="" class="yekanbakh-en line-clamp-2  w-full text-xs font-medium  -tracking-0.5 text-primary-shade-1 2md:h-[50px] 2md:text-sm 2md:leading-[27px] 2md:text-primary-shade-1">
+                                <h3 class="text-sm font-medium leading-[24px] ">گوشی موبایل هوآوی مدل Nova 11 Pro دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت</h3>
+                            </a>
+                            <div class="flex items-center justify-between ">
+                                <span class="bg-[#da1c28] text-white text-sm font-medium px-2 py-1 rounded font-yekanbakh-regular">12%</span>
+                                <div class="flex items-end gap-2 flex-col ">
+                                    <div class="flex items-center gap-2 ">
+                                        <span class="text-sm font-bold font-yekanbakh-regular">19,800,000</span>
+                                        <span class="text-xs">تومان</span>
+                                    </div>
+                                    <div class="flex items-center gap-2  ">
+                                        <span class="text-[11px] text-gray-400 font-bold line-through font-yekanbakh-regular">22,500,000</span>
+                                        <span class="text-[11px] text-gray-400">تومان</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="border-l border-gray-200 p-2">
+                        <div class="relative w-full">
+                            <a href=""> <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/pro01.webp' ?>" alt=""></a>
+                        </div>
+                        <div class="mt-4 flex flex-col gap-2">
+                            <a href="" class="yekanbakh-en line-clamp-2  w-full text-xs font-medium  -tracking-0.5 text-primary-shade-1 2md:h-[50px] 2md:text-sm 2md:leading-[27px] 2md:text-primary-shade-1">
+                                <h3 class="text-sm font-medium leading-[24px] ">گوشی موبایل نوکیا مدل G42 5G دو سیم کارت ظرفیت 128 گیگابایت و رم 6 گیگابایت</h3>
+                            </a>
+                            <div class="flex items-center justify-between ">
+                                <span class="bg-[#da1c28] text-white text-sm font-medium px-2 py-1 rounded font-yekanbakh-regular">15%</span>
+                                <div class="flex items-end gap-2 flex-col ">
+                                    <div class="flex items-center gap-2 ">
+                                        <span class="text-sm font-bold font-yekanbakh-regular">7,290,000</span>
+                                        <span class="text-xs">تومان</span>
+                                    </div>
+                                    <div class="flex items-center gap-2  ">
+                                        <span class="text-[11px] text-gray-400 font-bold line-through font-yekanbakh-regular">8,590,000</span>
+                                        <span class="text-[11px] text-gray-400">تومان</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="border-l border-gray-200 p-2">
+                        <div class="relative w-full">
+                            <a href=""> <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/pro01.webp' ?>" alt=""></a>
+                        </div>
+                        <div class="mt-4 flex flex-col gap-2">
+                            <a href="" class="yekanbakh-en line-clamp-2  w-full text-xs font-medium  -tracking-0.5 text-primary-shade-1 2md:h-[50px] 2md:text-sm 2md:leading-[27px] 2md:text-primary-shade-1">
+                                <h3 class="text-sm font-medium leading-[24px] ">گوشی موبایل وان پلاس مدل Nord CE3 Lite 5G دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت</h3>
+                            </a>
+                            <div class="flex items-center justify-between ">
+                                <span class="bg-[#da1c28] text-white text-sm font-medium px-2 py-1 rounded font-yekanbakh-regular">10%</span>
+                                <div class="flex items-end gap-2 flex-col ">
+                                    <div class="flex items-center gap-2 ">
+                                        <span class="text-sm font-bold font-yekanbakh-regular">11,890,000</span>
+                                        <span class="text-xs">تومان</span>
+                                    </div>
+                                    <div class="flex items-center gap-2  ">
+                                        <span class="text-[11px] text-gray-400 font-bold line-through font-yekanbakh-regular">13,200,000</span>
+                                        <span class="text-[11px] text-gray-400">تومان</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="border-l border-gray-200 p-2">
+                        <div class="relative w-full">
+                            <a href=""> <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/pro01.webp' ?>" alt=""></a>
+                        </div>
+                        <div class="mt-4 flex flex-col gap-2">
+                            <a href="" class="yekanbakh-en line-clamp-2  w-full text-xs font-medium  -tracking-0.5 text-primary-shade-1 2md:h-[50px] 2md:text-sm 2md:leading-[27px] 2md:text-primary-shade-1">
+                                <h3 class="text-sm font-medium leading-[24px] ">گوشی موبایل موتورولا مدل Edge 40 Neo دو سیم کارت ظرفیت 256 گیگابایت و رم 12 گیگابایت</h3>
+                            </a>
+                            <div class="flex items-center justify-between ">
+                                <span class="bg-[#da1c28] text-white text-sm font-medium px-2 py-1 rounded font-yekanbakh-regular">18%</span>
+                                <div class="flex items-end gap-2 flex-col ">
+                                    <div class="flex items-center gap-2 ">
+                                        <span class="text-sm font-bold font-yekanbakh-regular">16,490,000</span>
+                                        <span class="text-xs">تومان</span>
+                                    </div>
+                                    <div class="flex items-center gap-2  ">
+                                        <span class="text-[11px] text-gray-400 font-bold line-through font-yekanbakh-regular">20,100,000</span>
+                                        <span class="text-[11px] text-gray-400">تومان</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="border-l border-gray-200 p-2">
+                        <div class="relative w-full">
+                            <a href=""> <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/pro01.webp' ?>" alt=""></a>
+                        </div>
+                        <div class="mt-4 flex flex-col gap-2">
+                            <a href="" class="yekanbakh-en line-clamp-2  w-full text-xs font-medium  -tracking-0.5 text-primary-shade-1 2md:h-[50px] 2md:text-sm 2md:leading-[27px] 2md:text-primary-shade-1">
+                                <h3 class="text-sm font-medium leading-[24px] ">گوشی موبایل ریلمی مدل C53 دو سیم کارت ظرفیت 128 گیگابایت و رم 6 گیگابایت</h3>
+                            </a>
+                            <div class="flex items-center justify-between ">
+                                <span class="bg-[#da1c28] text-white text-sm font-medium px-2 py-1 rounded font-yekanbakh-regular">20%</span>
+                                <div class="flex items-end gap-2 flex-col ">
+                                    <div class="flex items-center gap-2 ">
+                                        <span class="text-sm font-bold font-yekanbakh-regular">5,890,000</span>
+                                        <span class="text-xs">تومان</span>
+                                    </div>
+                                    <div class="flex items-center gap-2  ">
+                                        <span class="text-[11px] text-gray-400 font-bold line-through font-yekanbakh-regular">7,390,000</span>
+                                        <span class="text-[11px] text-gray-400">تومان</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="border-l border-gray-200 p-2">
+                        <div class="relative w-full">
+                            <a href=""> <img class="w-full" src="<?php echo get_template_directory_uri() . '/assets/img/pro01.webp' ?>" alt=""></a>
+                        </div>
+                        <div class="mt-4 flex flex-col gap-2">
+                            <a href="" class="yekanbakh-en line-clamp-2  w-full text-xs font-medium  -tracking-0.5 text-primary-shade-1 2md:h-[50px] 2md:text-sm 2md:leading-[27px] 2md:text-primary-shade-1">
+                                <h3 class="text-sm font-medium leading-[24px] ">گوشی موبایل گوگل مدل Pixel 8 Pro دو سیم کارت ظرفیت 256 گیگابایت و رم 12 گیگابایت</h3>
+                            </a>
+                            <div class="flex items-center justify-between ">
+                                <span class="bg-[#da1c28] text-white text-sm font-medium px-2 py-1 rounded font-yekanbakh-regular">25%</span>
+                                <div class="flex items-end gap-2 flex-col ">
+                                    <div class="flex items-center gap-2 ">
+                                        <span class="text-sm font-bold font-yekanbakh-regular">45,900,000</span>
+                                        <span class="text-xs">تومان</span>
+                                    </div>
+                                    <div class="flex items-center gap-2  ">
+                                        <span class="text-[11px] text-gray-400 font-bold line-through font-yekanbakh-regular">61,200,000</span>
+                                        <span class="text-[11px] text-gray-400">تومان</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-
+            <div class="swiper-button-next product-discount-btn-next"></div>
+            <div class="swiper-button-prev product-discount-btn-prev"></div>
         </div>
-    </section>
 
-    <script src="<?php echo get_template_directory_uri() . '/assets/js/swiper-bundle.min.js' ?>"></script>
-    <script src="<?php echo get_template_directory_uri() . '/assets/js/main.js' ?>"></script>
+    </div>
+</section>
 
 
-</body>
 
-</html>
+<?php
+get_footer();
+?>

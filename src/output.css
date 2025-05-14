@@ -246,11 +246,11 @@
   .z-10 {
     z-index: 10;
   }
-  .z-20 {
-    z-index: 20;
-  }
   .z-30 {
     z-index: 30;
+  }
+  .z-\[3\] {
+    z-index: 3;
   }
   .col-1 {
     grid-column: 1;
@@ -392,6 +392,9 @@
   }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
+  }
+  .mt-9 {
+    margin-top: calc(var(--spacing) * 9);
   }
   .mr-0 {
     margin-right: calc(var(--spacing) * 0);
@@ -1037,6 +1040,11 @@
     &::placeholder {
       font-size: var(--text-sm);
       line-height: var(--tw-leading, var(--text-sm--line-height));
+    }
+  }
+  .placeholder\:text-gray-400 {
+    &::placeholder {
+      color: var(--color-gray-400);
     }
   }
   .placeholder\:text-primary {
