@@ -982,6 +982,9 @@
   .line-through {
     text-decoration-line: line-through;
   }
+  .overline {
+    text-decoration-line: overline;
+  }
   .underline {
     text-decoration-line: underline;
   }
