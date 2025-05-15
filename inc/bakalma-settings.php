@@ -5,7 +5,7 @@ if (class_exists('CSF')) {
 
     //
     // Set a unique slug-like ID
-    $prefix = 'bakalama_options';
+    $prefix = 'bakalama_setting';
 
     //
     // options
@@ -69,13 +69,20 @@ if (class_exists('CSF')) {
                 ),
                 'default' => 'default-header'
             ),
+
+            array(
+                'id'    => 'logo-header',
+                'type'  => 'media',
+                'title' => 'انتخاب لوگو',
+            ),
+
         )
     ));
 }
 
 
-function bakalama_options($key = '')
+function bakalama_setting($key = '')
 {
-    $options = get_option('bakalama_options');
+    $options = get_option('bakalama_setting');
     return isset($options[$key]) ? $options[$key] : null;
 }

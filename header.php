@@ -1,8 +1,9 @@
 <?php
 
-$header_type = bakalama_options('header-type');
-$link_top_header = bakalama_options('link-top-header');
-$img_top_header = bakalama_options('img-top-header');
+$header_type = bakalama_setting('header-type');
+$link_top_header = bakalama_setting('link-top-header');
+$img_top_header = bakalama_setting('img-top-header');
+$logo_header = bakalama_setting('logo-header');
 ?>
 
 
@@ -26,11 +27,11 @@ $img_top_header = bakalama_options('img-top-header');
         <section class="sticky top-0 left-0 right-0 z-10 bg-white">
             <header class="container max-w-[1480px] mx-auto flex items-center py-4 ">
                 <div>
-                    <a href=""><img src="<?php echo get_template_directory_uri() . '/assets/img/logo.svg' ?>" alt=""></a>
+                    <a href="<?php esc_url(home_url()); ?>"><img src="<?php echo esc_url($logo_header['url']) ?>" alt="<?php echo esc_attr(get_bloginfo('name')) ?>"></a>
                 </div>
                 <div class="flex flex-1 mr-6 h-14">
                     <div class="flex items-center justify-start bg-bg-color p-2 w-2xl gap-3 rounded-md">
-                        <img class="w-6 h-6 " src="<?php echo get_template_directory_uri() . '/assets/img/icon-search.svg' ?>" alt="">
+                        <img class="w-6 h-6" src="<?php echo get_template_directory_uri() . '/assets/img/icon-search.svg' ?>" alt="">
                         <label for="search"></label>
                         <input type="search" id="search" placeholder="محصول، برند یا دسته مورد نظرتان را جستجو کنید" class="outline-none w-full placeholder:text-sm placeholder:text-gray-400 ">
                     </div>
