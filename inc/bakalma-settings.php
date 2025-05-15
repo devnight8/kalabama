@@ -8,7 +8,7 @@ if (class_exists('CSF')) {
     $prefix = 'bakalama_options';
 
     //
-    // Create options
+    // options
     CSF::createOptions($prefix, array(
         'menu_title' => 'تنظیمات قالب',
         'menu_slug'  => 'theme-settings',
@@ -22,7 +22,7 @@ if (class_exists('CSF')) {
 
 
     //
-    // Create a section
+    // top header
     CSF::createSection($prefix, array(
 
 
@@ -54,19 +54,28 @@ if (class_exists('CSF')) {
         )
     ));
 
-    //
-    // Create a section
+    // header
     CSF::createSection($prefix, array(
-        'title'  => 'تنظیمات بخش دوم',
+        'title'  => 'تنظیمات هدر',
         'fields' => array(
-
-            // A textarea field
             array(
-                'id'    => 'opt-textarea',
-                'type'  => 'textarea',
-                'title' => 'متن چند خطی',
+                'id'          => 'header-type',
+                'type'        => 'select',
+                'title'       => 'انتخاب نوع هدر',
+                'placeholder' => 'یک گزینه را انتخاب کنید',
+                'options'     => array(
+                    'default-header'  => 'طرح پیش فرض',
+                    'elementor-header'  => 'طرح المنتوری',
+                ),
+                'default' => 'default-header'
             ),
-
         )
     ));
+}
+
+
+function bakalama_options($key = '')
+{
+    $options = get_option('bakalama_options');
+    return isset($options[$key]) ? $options[$key] : null;
 }

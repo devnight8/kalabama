@@ -12,6 +12,4 @@ define('BAKALAMA_THEMEURI', get_theme_file_uri() . '/');
 
 require_once(BAKALAMA_THEMEDIR . 'inc/codestar/codestar-framework.php');
 require_once(BAKALAMA_THEMEDIR . 'inc/bakalma-settings.php');
-
-
 require BAKALAMA_THEMEDIR . 'inc/bakalama-assets.php';
