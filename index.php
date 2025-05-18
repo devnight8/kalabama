@@ -73,7 +73,7 @@ get_header()
         <!-- <div class="swiper-pagination"></div> -->
     </div>
 </section>
-<!-- KALABAMA OFF -->
+<!-- BAKALAMA PRODUCT OFF -->
 <section class="container max-w-[1480px] mx-auto border border-red-100 rounded-md p-4 flex flex-col">
     <div class="bg-red-800 flex items-center justify-between rounded-md p-4 ">
         <h4 class="text-white font-extrabold">محصولات جشنواره</h4>
@@ -332,6 +332,15 @@ get_header()
     </div>
 </section>
 
+
+<!-- BANNERS -->
+<section class="my-16 container  max-w-[1480px] mx-auto">
+    <div class="flex items-center justify-between gap-4">
+        <a href=""><img class="rounded-2xl" src="<?php echo get_template_directory_uri() . '/assets/img/banner01.webp' ?>" alt=""></a>
+        <a href=""><img class="rounded-2xl" src="<?php echo get_template_directory_uri() . '/assets/img/banner02.webp' ?>" alt=""></a>
+        <a href=""><img class="rounded-2xl" src="<?php echo get_template_directory_uri() . '/assets/img/banner03.webp' ?>" alt=""></a>
+    </div>
+</section>
 
 
 <?php
