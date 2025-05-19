@@ -39,10 +39,55 @@ $logo_size = bakalama_setting('logo-size');
                 </div>
                 <div class="flex items-center gap-5 relative">
                     <?php if (is_user_logged_in()): ?>
-                        <button class="border border-gray-500 px-7 py-2 rounded-md cursor-pointer"> ناحیه کاربری</button>
+                        <button class="border border-gray-500 px-7 py-2 rounded-md cursor-pointer" id="my-account"> ناحیه کاربری</button>
                     <?php else: ?>
-                        <button class="border border-gray-500 px-7 py-2 rounded-md cursor-pointer"> ورود | ثبت نام </button>
+                        <button class="border border-gray-500 px-7 py-2 rounded-md cursor-pointer" id="registration"> ورود | ثبت نام </button>
                     <?php endif; ?>
+                    <!-- Modal Login/Register -->
+                    <div id="auth-modal" class="hidden fixed inset-0 bg-black/65 bg-opacity-50 overflow-y-auto h-full w-full z-50 transition-opacity duration-300 opacity-0">
+                        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white transform transition-transform duration-300 scale-95">
+                            <div class="flex flex-col items-center">
+                                <!-- Tab headers -->
+                                <div class="flex w-full mb-8 gap-4">
+                                    <button class="flex-1 py-2 text-center border-b-2 border-blue-500 text-blue-500" data-tab="login">ورود</button>
+                                    <button class="flex-1 py-2 text-center" data-tab="register">ثبت نام</button>
+                                </div>
+
+                                <!-- Login Form -->
+                                <form id="login-form" class="w-full">
+                                    <div class="mb-4">
+                                        <input type="email" class="w-full p-2 border rounded-md outline-none focus:border-blue-500" placeholder="ایمیل">
+                                    </div>
+                                    <div class="mb-6">
+                                        <input type="password" class="w-full p-2 border rounded-md outline-none focus:border-blue-500" placeholder="رمز عبور">
+                                    </div>
+                                    <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition-colors">
+                                        ورود به حساب کاربری
+                                    </button>
+                                </form>
+
+                                <!-- Register Form -->
+                                <form id="register-form" class="w-full hidden">
+                                    <div class="mb-4">
+                                        <input type="email" class="w-full p-2 border rounded-md outline-none focus:border-blue-500" placeholder="ایمیل">
+                                    </div>
+                                    <div class="mb-6">
+                                        <input type="password" class="w-full p-2 border rounded-md outline-none focus:border-blue-500" placeholder="رمز عبور">
+                                    </div>
+                                    <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition-colors">
+                                        ثبت نام
+                                    </button>
+                                </form>
+                            </div>
+                            <!-- Close button -->
+                            <button id="close-modal" class="absolute top-3 left-3 text-gray-400 hover:text-gray-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- CART CONTAINER -->
                     <div id="cart-container" class="mt-2">
                         <button id="cart-button" class="hover:[&+div]:block relative">
                             <img class="w-10 h-10 border p-2 border-gray-200  rounded-md" src="<?php echo get_template_directory_uri() . '/assets/img/bag.svg' ?>" alt="">

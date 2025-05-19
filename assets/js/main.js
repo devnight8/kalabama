@@ -75,3 +75,61 @@ container.addEventListener("mouseenter", () => {
 container.addEventListener("mouseleave", () => {
   cartBox.classList.add("hidden");
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("auth-modal");
+  const modalContent = modal.querySelector(".relative");
+  const registrationBtn = document.getElementById("registration");
+  const closeBtn = document.getElementById("close-modal");
+  const tabBtns = document.querySelectorAll("[data-tab]");
+  const loginForm = document.getElementById("login-form");
+  const registerForm = document.getElementById("register-form");
+
+  // Open modal with animation
+  registrationBtn.addEventListener("click", () => {
+    modal.classList.remove("hidden");
+    // Trigger reflow
+    modal.offsetHeight;
+    modal.classList.remove("opacity-0");
+    modalContent.classList.remove("scale-95");
+    modalContent.classList.add("scale-100");
+  });
+
+  // Close modal with animation
+  const closeModal = () => {
+    modal.classList.add("opacity-0");
+    modalContent.classList.remove("scale-100");
+    modalContent.classList.add("scale-95");
+    setTimeout(() => {
+      modal.classList.add("hidden");
+    }, 300);
+  };
+
+  closeBtn.addEventListener("click", closeModal);
+
+  // Close on outside click
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Tab switching
+  tabBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      tabBtns.forEach((b) => {
+        b.classList.remove("border-b-2", "border-blue-500", "text-blue-500");
+      });
+
+      btn.classList.add("border-b-2", "border-blue-500", "text-blue-500");
+
+      if (btn.dataset.tab === "login") {
+        loginForm.classList.remove("hidden");
+        registerForm.classList.add("hidden");
+      } else {
+        loginForm.classList.add("hidden");
+        registerForm.classList.remove("hidden");
+      }
+    });
+  });
+});
