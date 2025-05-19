@@ -4,6 +4,7 @@ $header_type = bakalama_setting('header-type');
 $link_top_header = bakalama_setting('link-top-header');
 $img_top_header = bakalama_setting('img-top-header');
 $logo_header = bakalama_setting('logo-header');
+$logo_size = bakalama_setting('logo-size');
 ?>
 
 
@@ -27,17 +28,21 @@ $logo_header = bakalama_setting('logo-header');
         <section class="sticky top-0 left-0 right-0 z-10 bg-white">
             <header class="container max-w-[1480px] mx-auto flex items-center py-4 ">
                 <div>
-                    <a href="<?php esc_url(home_url()); ?>"><img src="<?php echo esc_url($logo_header['url']) ?>" alt="<?php echo esc_attr(get_bloginfo('name')) ?>"></a>
+                    <a href="<?php esc_url(home_url()); ?>"><img width="<?php echo esc_attr($logo_size) ?>px" src="<?php echo esc_url($logo_header['url']) ?>" alt="<?php echo esc_attr(get_bloginfo('name')) ?>"></a>
                 </div>
                 <div class="flex flex-1 mr-6 h-14">
-                    <div class="flex items-center justify-start bg-bg-color p-2 w-2xl gap-3 rounded-md">
+                    <form class="flex items-center justify-start bg-bg-color p-2 w-2xl gap-3 rounded-md " action="">
                         <img class="w-6 h-6" src="<?php echo get_template_directory_uri() . '/assets/img/icon-search.svg' ?>" alt="">
                         <label for="search"></label>
                         <input type="search" id="search" placeholder="محصول، برند یا دسته مورد نظرتان را جستجو کنید" class="outline-none w-full placeholder:text-sm placeholder:text-gray-400 ">
-                    </div>
+                    </form>
                 </div>
                 <div class="flex items-center gap-5 relative">
-                    <button class="border border-gray-500 px-7 py-2 rounded-md cursor-pointer"> ورود | ثبت نام </button>
+                    <?php if (is_user_logged_in()): ?>
+                        <button class="border border-gray-500 px-7 py-2 rounded-md cursor-pointer"> ناحیه کاربری</button>
+                    <?php else: ?>
+                        <button class="border border-gray-500 px-7 py-2 rounded-md cursor-pointer"> ورود | ثبت نام </button>
+                    <?php endif; ?>
                     <div id="cart-container" class="mt-2">
                         <button id="cart-button" class="hover:[&+div]:block relative">
                             <img class="w-10 h-10 border p-2 border-gray-200  rounded-md" src="<?php echo get_template_directory_uri() . '/assets/img/bag.svg' ?>" alt="">

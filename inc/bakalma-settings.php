@@ -76,6 +76,14 @@ if (class_exists('CSF')) {
                 'title' => 'انتخاب لوگو',
             ),
 
+            array(
+                'id'    => 'logo-size',
+                'type' => 'text',
+                'title' => 'سایز لوگو به پیکسل',
+                'placeholder' => '200',
+                'default' => '112',
+            ),
+
         )
     ));
 }
