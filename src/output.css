@@ -236,6 +236,9 @@
   .top-22 {
     top: calc(var(--spacing) * 22);
   }
+  .top-\[50\%\] {
+    top: 50%;
+  }
   .-right-1 {
     right: calc(var(--spacing) * -1);
   }

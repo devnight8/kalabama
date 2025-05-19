@@ -44,7 +44,7 @@ $logo_size = bakalama_setting('logo-size');
                         <button class="border border-gray-500 px-7 py-2 rounded-md cursor-pointer" id="registration"> ورود | ثبت نام </button>
                     <?php endif; ?>
                     <!-- Modal Login/Register -->
-                    <div id="auth-modal" class="hidden fixed inset-0 bg-black/65 bg-opacity-50 overflow-y-auto h-full w-full z-50 transition-opacity duration-300 opacity-0">
+                    <div id="auth-modal" class="hidden fixed inset-0 bg-black/65  overflow-y-auto h-full w-full z-50 transition-opacity duration-300 opacity-0">
                         <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white transform transition-transform duration-300 scale-95">
                             <div class="flex flex-col items-center">
                                 <!-- Tab headers -->
@@ -52,11 +52,10 @@ $logo_size = bakalama_setting('logo-size');
                                     <button class="flex-1 py-2 text-center border-b-2 border-blue-500 text-blue-500" data-tab="login">ورود</button>
                                     <button class="flex-1 py-2 text-center" data-tab="register">ثبت نام</button>
                                 </div>
-
                                 <!-- Login Form -->
                                 <form id="login-form" class="w-full">
                                     <div class="mb-4">
-                                        <input type="email" class="w-full p-2 border rounded-md outline-none focus:border-blue-500" placeholder="ایمیل">
+                                        <input type="text" class="w-full p-2 border rounded-md outline-none focus:border-blue-500" placeholder="ایمیل یا نام کاربری">
                                     </div>
                                     <div class="mb-6">
                                         <input type="password" class="w-full p-2 border rounded-md outline-none focus:border-blue-500" placeholder="رمز عبور">
@@ -65,11 +64,10 @@ $logo_size = bakalama_setting('logo-size');
                                         ورود به حساب کاربری
                                     </button>
                                 </form>
-
                                 <!-- Register Form -->
                                 <form id="register-form" class="w-full hidden">
                                     <div class="mb-4">
-                                        <input type="email" class="w-full p-2 border rounded-md outline-none focus:border-blue-500" placeholder="ایمیل">
+                                        <input type="text" class="w-full p-2 border rounded-md outline-none focus:border-blue-500" placeholder="ایمیل یا نام کاربری">
                                     </div>
                                     <div class="mb-6">
                                         <input type="password" class="w-full p-2 border rounded-md outline-none focus:border-blue-500" placeholder="رمز عبور">
