@@ -74,6 +74,7 @@ if (class_exists('CSF')) {
                 'id'    => 'logo-header',
                 'type'  => 'media',
                 'title' => 'انتخاب لوگو',
+
             ),
 
             array(
@@ -82,6 +83,35 @@ if (class_exists('CSF')) {
                 'title' => 'سایز لوگو به پیکسل',
                 'placeholder' => '200',
                 'default' => '112',
+            ),
+
+            array(
+                'id'          => 'auth-btn-type',
+                'type'        => 'select',
+                'title'       => 'نوع دکمه ورود و ثبت نام',
+                'placeholder' => 'یک گزینه را انتخاب کنید',
+                'options'     => array(
+                    'link'  => 'لینک سفارشی',
+                    'modal'  => 'مدال',
+                ),
+                'default' => 'modal'
+            ),
+
+            array(
+                'id' => 'text-auth-btn',
+                'type' => 'text',
+                'title' => 'متن دکمه ورود و ثبت نام',
+                'placeholder' => 'ورود و ثبت نام',
+                'default' => 'ورود و ثبت نام',
+                'dependency' => array('auth-btn-type', '==', 'link')
+            ),
+
+            array(
+                'id' => 'link-auth-btn',
+                'type' => 'text',
+                'title' => 'لینک دکمه ورود و ثبت نام',
+                'placeholder' => 'https://example.com',
+                'dependency' => array('auth-btn-type', '==', 'link')
             ),
 
         )

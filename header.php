@@ -5,6 +5,13 @@ $link_top_header = bakalama_setting('link-top-header');
 $img_top_header = bakalama_setting('img-top-header');
 $logo_header = bakalama_setting('logo-header');
 $logo_size = bakalama_setting('logo-size');
+$auth_btn_type = bakalama_setting('auth-btn-type');
+$auth_btn_text = bakalama_setting('text-auth-btn');
+$auth_btn_link = bakalama_setting('link-auth-btn');
+
+$account_link = get_permalink(get_option('woocommerce_myaccount_page_id'));
+
+
 ?>
 
 
@@ -41,7 +48,13 @@ $logo_size = bakalama_setting('logo-size');
                     <?php if (is_user_logged_in()): ?>
                         <button class="border border-gray-500 px-7 py-2 rounded-md cursor-pointer" id="my-account"> ناحیه کاربری</button>
                     <?php else: ?>
-                        <button class="border border-gray-500 px-7 py-2 rounded-md cursor-pointer" id="registration"> ورود | ثبت نام </button>
+                        <?php if ($auth_btn_type == 'link'): ?>
+                            <a href="<?php echo esc_url($auth_btn_link); ?>" class="border border-gray-500 px-7 py-2 rounded-md cursor-pointer">
+                                <?php echo esc_html($auth_btn_text); ?>
+                            </a>
+                        <?php else: ?>
+                            <button class="border border-gray-500 px-7 py-2 rounded-md cursor-pointer" id="registration"> ورود | ثبت نام </button>
+                        <?php endif; ?>
                     <?php endif; ?>
                     <!-- Modal Login/Register -->
                     <div id="auth-modal" class="hidden fixed inset-0 bg-black/65  overflow-y-auto h-full w-full z-50 transition-opacity duration-300 opacity-0">
@@ -53,26 +66,27 @@ $logo_size = bakalama_setting('logo-size');
                                     <button class="flex-1 py-2 text-center" data-tab="register">ثبت نام</button>
                                 </div>
                                 <!-- Login Form -->
-                                <form id="login-form" class="w-full">
+                                <form id="login-form" class="w-full" method="post" action="<?php echo esc_url($account_link) ?>">
                                     <div class="mb-4">
-                                        <input type="text" class="w-full p-2 border rounded-md outline-none focus:border-blue-500" placeholder="ایمیل یا نام کاربری">
+                                        <input type="text" name="username" class="w-full p-2 border rounded-md outline-none focus:border-blue-500" placeholder="ایمیل یا نام کاربری">
                                     </div>
                                     <div class="mb-6">
-                                        <input type="password" class="w-full p-2 border rounded-md outline-none focus:border-blue-500" placeholder="رمز عبور">
+                                        <input name="password" type="password" class="w-full p-2 border rounded-md outline-none focus:border-blue-500" placeholder="رمز عبور">
                                     </div>
-                                    <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition-colors">
+                                    <?php wp_nonce_field('woocommerce-login') ?>
+                                    <button type="submit" name="login" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition-colors">
                                         ورود به حساب کاربری
                                     </button>
                                 </form>
                                 <!-- Register Form -->
-                                <form id="register-form" class="w-full hidden">
+                                <form id="register-form" class="w-full hidden" action="<?php echo esc_url($account_link); ?>" method="post">
                                     <div class="mb-4">
                                         <input type="text" class="w-full p-2 border rounded-md outline-none focus:border-blue-500" placeholder="ایمیل یا نام کاربری">
                                     </div>
                                     <div class="mb-6">
                                         <input type="password" class="w-full p-2 border rounded-md outline-none focus:border-blue-500" placeholder="رمز عبور">
                                     </div>
-                                    <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition-colors">
+                                    <button type="submit" name="login" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition-colors">
                                         ثبت نام
                                     </button>
                                 </form>
